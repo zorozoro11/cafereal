@@ -4,6 +4,7 @@ import android.app.Service
 import android.content.Intent
 import android.os.Binder
 import android.os.IBinder
+import com.cafetone.dsp.interop.JamesDspLocalEngine
 
 abstract class BaseAudioProcessorService : Service() {
     private val binder: IBinder = LocalBinder()
@@ -26,6 +27,9 @@ abstract class BaseAudioProcessorService : Service() {
         activeServices--
         super.onDestroy()
     }
+    
+    // Abstract method for subclasses to provide DSP engine access
+    abstract fun getDspEngine(): JamesDspLocalEngine?
 
     companion object {
         var activeServices: Int = 0
