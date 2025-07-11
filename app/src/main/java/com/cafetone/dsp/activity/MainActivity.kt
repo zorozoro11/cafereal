@@ -290,25 +290,32 @@ class MainActivity : BaseActivity() {
         val intensity = distancePercent / 100f
         
         // 15-band EQ configuration for distance simulation
-        val bands = arrayOf(
-            25.0 to -4.0f * intensity,      // Sub-bass roll-off
-            40.0 to -6.0f * intensity,      // Bass reduction
-            80.0 to -5.0f * intensity,      // Low-bass
-            160.0 to -4.0f * intensity,     // Low-mid bass
-            320.0 to -3.5f * intensity,     // Low-mid scoop
-            500.0 to -3.0f * intensity,     // Mid scoop
-            1000.0 to -2.5f * intensity,    // Mid transparency
-            2000.0 to -2.0f * intensity,    // High-mid start
-            4000.0 to -5.0f * intensity,    // Air absorption
-            6000.0 to -6.0f * intensity,    // Upper air absorption
-            8000.0 to -7.0f * intensity,    // Treble softening
-            10000.0 to -9.0f * intensity,   // High treble cut
-            12000.0 to -11.0f * intensity,  // Ultra-high cut
-            14000.0 to -13.0f * intensity,  // Extreme high cut
-            16000.0 to -15.0f * intensity   // Maximum high cut
+        // Format: frequencies;gains (30 values total - 15 frequencies + 15 gains)
+        val frequencies = arrayOf(
+            25.0, 40.0, 63.0, 100.0, 160.0, 250.0, 400.0, 630.0, 1000.0, 1600.0, 2500.0, 4000.0, 6300.0, 10000.0, 16000.0
         )
         
-        return bands.map { (freq, gain) -> "$freq;$gain" }.joinToString(";")
+        val gains = arrayOf(
+            -4.0f * intensity,      // Sub-bass roll-off
+            -6.0f * intensity,      // Bass reduction
+            -5.0f * intensity,      // Low-bass
+            -4.0f * intensity,      // Low-mid bass
+            -3.5f * intensity,      // Low-mid scoop
+            -3.0f * intensity,      // Mid scoop
+            -2.5f * intensity,      // Mid transparency
+            -2.0f * intensity,      // High-mid start
+            -1.5f * intensity,      // Mid presence
+            -2.0f * intensity,      // High-mid
+            -4.0f * intensity,      // Upper-mid
+            -5.0f * intensity,      // Air absorption
+            -7.0f * intensity,      // Treble softening
+            -11.0f * intensity,     // Ultra-high cut
+            -15.0f * intensity      // Extreme high cut
+        )
+        
+        // Combine frequencies and gains in the expected format
+        val allValues = frequencies.map { it.toString() } + gains.map { it.toString() }
+        return allValues.joinToString(";")
     }
     
     /**
