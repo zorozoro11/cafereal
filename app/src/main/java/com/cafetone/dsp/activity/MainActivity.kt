@@ -244,11 +244,109 @@ class MainActivity : BaseActivity() {
 
     private fun applyCafeModeSettings() {
         CoroutineScope(Dispatchers.Default).launch {
-            // Apply café mode DSP settings
-            // This will be implemented in Phase 2
-            Timber.d("Applying café mode settings: Intensity=$intensityLevel%, SpatialWidth=$spatialWidthLevel%, Distance=$distanceLevel%")
+            try {
+                // Apply café mode DSP settings using Sony café mode algorithm
+                Timber.d("Applying café mode settings: Intensity=$intensityLevel%, SpatialWidth=$spatialWidthLevel%, Distance=$distanceLevel%")
+                
+                // Get the DSP engine from the service
+                val engine = processorService?.getDspEngine()
+                
+                if (engine != null) {
+                    // Apply Distance Simulation EQ Profile
+                    val distanceEqBands = getDistanceEqBands(distanceLevel.toFloat())
+                    engine.setMultiEqualizer(true, 0, 0, distanceEqBands)
+                    
+                    // Apply Spatial & Positioning effects
+                    val spatialSettings = getSpatialSettings(spatialWidthLevel.toFloat())
+                    engine.setCrossfeedCustom(true, spatialSettings.crossfeedFcut, spatialSettings.crossfeedFeed)
+                    engine.setStereoEnhancement(true, spatialSettings.stereoWidth)
+                    
+                    // Apply Café Ambience
+                    val ambienceSettings = getCafeAmbienceSettings(intensityLevel.toFloat())
+                    engine.setReverb(true, ambienceSettings.reverbPreset)
+                    engine.setOutputControl(-0.1f, 60f, ambienceSettings.overallGainReduction)
+                    
+                    Timber.i("Café mode settings applied successfully")
+                } else {
+                    Timber.w("DSP engine not available - service may not be running")
+                }
+                
+                // Save settings for persistence
+                saveCafeModeSettings()
+                
+            } catch (ex: Exception) {
+                Timber.e(ex, "Failed to apply café mode settings")
+            }
         }
     }
+    
+    // Sony Café Mode DSP Processing Chain Implementation
+    
+    /**
+     * Distance Simulation EQ Profile (Distance slider: 0-100% → 80% default)
+     * Maps distance percentage to EQ curve that simulates acoustic distance
+     */
+    private fun getDistanceEqBands(distancePercent: Float): String {
+        val intensity = distancePercent / 100f
+        
+        // 15-band EQ configuration for distance simulation
+        val bands = arrayOf(
+            25.0 to -4.0f * intensity,      // Sub-bass roll-off
+            40.0 to -6.0f * intensity,      // Bass reduction
+            80.0 to -5.0f * intensity,      // Low-bass
+            160.0 to -4.0f * intensity,     // Low-mid bass
+            320.0 to -3.5f * intensity,     // Low-mid scoop
+            500.0 to -3.0f * intensity,     // Mid scoop
+            1000.0 to -2.5f * intensity,    // Mid transparency
+            2000.0 to -2.0f * intensity,    // High-mid start
+            4000.0 to -5.0f * intensity,    // Air absorption
+            6000.0 to -6.0f * intensity,    // Upper air absorption
+            8000.0 to -7.0f * intensity,    // Treble softening
+            10000.0 to -9.0f * intensity,   // High treble cut
+            12000.0 to -11.0f * intensity,  // Ultra-high cut
+            14000.0 to -13.0f * intensity,  // Extreme high cut
+            16000.0 to -15.0f * intensity   // Maximum high cut
+        )
+        
+        return bands.map { (freq, gain) -> "$freq;$gain" }.joinToString(";")
+    }
+    
+    /**
+     * Spatial & Positioning (Spatial Width slider: 0-100% → 60% default)
+     * Maps spatial width percentage to stereo effects
+     */
+    private fun getSpatialSettings(spatialPercent: Float): SpatialSettings {
+        val width = spatialPercent / 100f
+        return SpatialSettings(
+            crossfeedFcut = (700 + (width * 400)).toInt(),      // 700Hz to 1100Hz
+            crossfeedFeed = (10 + (width * 25)).toInt(),        // 10% to 35% feed
+            stereoWidth = 1.2f + (width * 0.8f)                 // 120% to 200% width
+        )
+    }
+    
+    /**
+     * Café Ambience (Intensity slider: 0-100% → 70% default)
+     * Maps intensity percentage to café ambience settings
+     */
+    private fun getCafeAmbienceSettings(intensityPercent: Float): AmbienceSettings {
+        val intensity = intensityPercent / 100f
+        return AmbienceSettings(
+            reverbPreset = if (intensity > 0.5f) 2 else 1,      // Room reverb type
+            overallGainReduction = -3.0f - (intensity * 7.0f)   // -3dB to -10dB
+        )
+    }
+    
+    // Data classes for DSP settings
+    private data class SpatialSettings(
+        val crossfeedFcut: Int,
+        val crossfeedFeed: Int,
+        val stereoWidth: Float
+    )
+    
+    private data class AmbienceSettings(
+        val reverbPreset: Int,
+        val overallGainReduction: Float
+    )
 
     private fun loadCafeModeSettings() {
         intensityLevel = prefsApp.get<Int>(R.string.key_cafe_intensity) ?: 70
