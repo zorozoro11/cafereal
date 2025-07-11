@@ -266,6 +266,9 @@ class MainActivity : BaseActivity() {
                     engine.setReverb(true, ambienceSettings.reverbPreset)
                     engine.setOutputControl(-0.1f, 60f, ambienceSettings.overallGainReduction)
                     
+                    // Send preference update to sync with service
+                    sendLocalBroadcast(Intent(Constants.ACTION_PREFERENCES_UPDATED))
+                    
                     Timber.i("Café mode settings applied successfully")
                 } else {
                     Timber.w("DSP engine not available - service may not be running")
