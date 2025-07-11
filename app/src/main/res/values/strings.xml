@@ -664,4 +664,19 @@ Tap on \'Tutorial\' below for detailed instructions.</string>
     <string name="android_15_screenshare_keyguard_warning">Android 15 introduces a restriction that stops screen sharing when the device is locked. To workaround this issue, the \'PROJECT_MEDIA\' permission must be granted using Shizuku or ADB.
 
 Please press \'Continue\' below to re-do the setup wizard.</string>
+
+    <!-- Café Mode -->
+    <string name="cafe_mode_welcome">Welcome to Cafetone</string>
+    <string name="cafe_mode_description">Transform your audio into a cozy café experience with three simple controls</string>
+    <string name="intensity">Intensity</string>
+    <string name="intensity_description">Control the overall café effect strength</string>
+    <string name="spatial_width">Spatial Width</string>
+    <string name="spatial_width_description">Adjust the stereo positioning and spatial width</string>
+    <string name="distance">Distance</string>
+    <string name="distance_description">Simulate the perceived distance from the audio source</string>
+    
+    <!-- Café Mode Settings Keys -->
+    <string name="key_cafe_intensity">cafe_intensity</string>
+    <string name="key_cafe_spatial_width">cafe_spatial_width</string>
+    <string name="key_cafe_distance">cafe_distance</string>
 </resources>
