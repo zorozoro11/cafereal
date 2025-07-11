@@ -66,58 +66,6 @@ android {
             isShrinkResources = false
             signingConfig = signingConfigs.getByName("debug")
         }
-        create("preview") {
-            initWith(getByName("release"))
-            buildConfigField("boolean", "PREVIEW", "true")
-
-            val debugType = getByName("debug")
-            versionNameSuffix = debugType.versionNameSuffix
-            matchingFallbacks.add("release")
-        }
-    }
-
-    flavorDimensions += "version"
-    flavorDimensions += "dependencies"
-    productFlavors {
-        create("fdroid") {
-            dimension = "dependencies"
-            buildConfigField("boolean", "FOSS_ONLY", "true")
-            android.defaultConfig.externalNativeBuild.cmake.arguments += "-DNO_CRASHLYTICS=1"
-        }
-        create("full") {
-            dimension = "dependencies"
-            buildConfigField("boolean", "FOSS_ONLY", "false")
-        }
-
-        create("rootless") {
-            dimension = "version"
-
-            manifestPlaceholders["label"] = "RootlessJamesDSP"
-            applicationId = "me.timschneeberger.rootlessjamesdsp"
-            AndroidConfig.minSdk = 29
-            minSdk = AndroidConfig.minSdk
-            buildConfigField("boolean", "ROOTLESS", "true")
-            buildConfigField("boolean", "PLUGIN", "false")
-        }
-        create("root") {
-            dimension = "version"
-
-            manifestPlaceholders["label"] = "JamesDSP"
-            project.setProperty("archivesBaseName", "JamesDSP-v${AndroidConfig.versionName}-${AndroidConfig.versionCode}")
-            applicationId = "james.dsp"
-            AndroidConfig.minSdk = 26
-            minSdk = AndroidConfig.minSdk
-            buildConfigField("boolean", "ROOTLESS", "false")
-            buildConfigField("boolean", "PLUGIN", "false")
-        }
-        create("plugin") {
-            dimension = "version"
-
-            AndroidConfig.minSdk = 26
-            minSdk = AndroidConfig.minSdk
-            buildConfigField("boolean", "ROOTLESS", "false")
-            buildConfigField("boolean", "PLUGIN", "true")
-        }
     }
 
     sourceSets {
