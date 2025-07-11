@@ -11,8 +11,8 @@ import android.os.Build
 import android.os.ParcelFileDescriptor
 import android.provider.OpenableColumns
 import android.system.Os
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.CompatExtensions.getPackageInfoCompat
-import me.timschneeberger.rootlessjamesdsp.utils.sdkAbove
+import com.cafetone.dsp.utils.extensions.CompatExtensions.getPackageInfoCompat
+import com.cafetone.dsp.utils.sdkAbove
 import timber.log.Timber
 import java.io.File
 import java.util.*

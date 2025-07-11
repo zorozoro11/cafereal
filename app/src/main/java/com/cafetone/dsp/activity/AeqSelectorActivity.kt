@@ -9,14 +9,14 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.adapter.AutoEqResultAdapter
-import me.timschneeberger.rootlessjamesdsp.api.AutoEqClient
-import me.timschneeberger.rootlessjamesdsp.contract.AutoEqSelectorContract
-import me.timschneeberger.rootlessjamesdsp.databinding.ActivityAeqSelectorBinding
-import me.timschneeberger.rootlessjamesdsp.model.api.AeqSearchResult
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.CompatExtensions.getSerializableAs
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.hideKeyboardFrom
+import com.cafetone.dsp.R
+import com.cafetone.dsp.adapter.AutoEqResultAdapter
+import com.cafetone.dsp.api.AutoEqClient
+import com.cafetone.dsp.contract.AutoEqSelectorContract
+import com.cafetone.dsp.databinding.ActivityAeqSelectorBinding
+import com.cafetone.dsp.model.api.AeqSearchResult
+import com.cafetone.dsp.utils.extensions.CompatExtensions.getSerializableAs
+import com.cafetone.dsp.utils.extensions.ContextExtensions.hideKeyboardFrom
 
 class AeqSelectorActivity : BaseActivity() {
 

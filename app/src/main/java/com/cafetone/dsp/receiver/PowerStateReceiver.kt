@@ -3,7 +3,7 @@ package com.cafetone.dsp.receiver
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import me.timschneeberger.rootlessjamesdsp.utils.EngineUtils.toggleEnginePower
+import com.cafetone.dsp.utils.EngineUtils.toggleEnginePower
 import timber.log.Timber
 
 class PowerStateReceiver : BroadcastReceiver() {

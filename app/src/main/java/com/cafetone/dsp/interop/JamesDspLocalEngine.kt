@@ -2,9 +2,9 @@ package com.cafetone.dsp.interop
 
 import android.content.Context
 import android.content.Intent
-import me.timschneeberger.rootlessjamesdsp.interop.structure.EelVmVariable
-import me.timschneeberger.rootlessjamesdsp.utils.Constants
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.sendLocalBroadcast
+import com.cafetone.dsp.interop.structure.EelVmVariable
+import com.cafetone.dsp.utils.Constants
+import com.cafetone.dsp.utils.extensions.ContextExtensions.sendLocalBroadcast
 import timber.log.Timber
 import java.util.Timer
 import kotlin.concurrent.schedule

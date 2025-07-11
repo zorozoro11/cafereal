@@ -1,9 +1,9 @@
 package com.cafetone.dsp.delegates
 
 import android.app.Activity
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.model.preference.AppTheme
-import me.timschneeberger.rootlessjamesdsp.utils.preferences.Preferences
+import com.cafetone.dsp.R
+import com.cafetone.dsp.model.preference.AppTheme
+import com.cafetone.dsp.utils.preferences.Preferences
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

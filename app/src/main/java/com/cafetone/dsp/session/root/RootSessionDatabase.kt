@@ -4,15 +4,15 @@ import android.content.Context
 import android.content.Intent
 import android.media.audiofx.AudioEffect
 import kotlinx.coroutines.Job
-import me.timschneeberger.rootlessjamesdsp.MainApplication
-import me.timschneeberger.rootlessjamesdsp.interop.JamesDspRemoteEngine
-import me.timschneeberger.rootlessjamesdsp.interop.ProcessorMessageHandler
-import me.timschneeberger.rootlessjamesdsp.model.AudioSessionDumpEntry
-import me.timschneeberger.rootlessjamesdsp.model.IEffectSession
-import me.timschneeberger.rootlessjamesdsp.model.root.RemoteEffectSession
-import me.timschneeberger.rootlessjamesdsp.session.shared.BaseSessionDatabase
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.getUidFromPackage
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.toast
+import com.cafetone.dsp.MainApplication
+import com.cafetone.dsp.interop.JamesDspRemoteEngine
+import com.cafetone.dsp.interop.ProcessorMessageHandler
+import com.cafetone.dsp.model.AudioSessionDumpEntry
+import com.cafetone.dsp.model.IEffectSession
+import com.cafetone.dsp.model.root.RemoteEffectSession
+import com.cafetone.dsp.session.shared.BaseSessionDatabase
+import com.cafetone.dsp.utils.extensions.ContextExtensions.getUidFromPackage
+import com.cafetone.dsp.utils.extensions.ContextExtensions.toast
 import timber.log.Timber
 
 

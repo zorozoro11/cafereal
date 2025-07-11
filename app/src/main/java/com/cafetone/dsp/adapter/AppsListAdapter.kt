@@ -9,8 +9,8 @@ import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.model.AppInfo
+import com.cafetone.dsp.R
+import com.cafetone.dsp.model.AppInfo
 
 class AppsListAdapter: RecyclerView.Adapter<AppsListAdapter.ViewHolder>(), Filterable {
     var dataList: List<AppInfo> = emptyList()

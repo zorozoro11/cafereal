@@ -2,12 +2,12 @@ package com.cafetone.dsp.fragment.settings
 
 import android.os.Bundle
 import androidx.preference.*
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.model.preference.AppTheme
-import me.timschneeberger.rootlessjamesdsp.model.preference.ThemeMode
-import me.timschneeberger.rootlessjamesdsp.preference.ThemesPreference
-import me.timschneeberger.rootlessjamesdsp.utils.Constants
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.isDynamicColorAvailable
+import com.cafetone.dsp.R
+import com.cafetone.dsp.model.preference.AppTheme
+import com.cafetone.dsp.model.preference.ThemeMode
+import com.cafetone.dsp.preference.ThemesPreference
+import com.cafetone.dsp.utils.Constants
+import com.cafetone.dsp.utils.extensions.isDynamicColorAvailable
 
 class SettingsAppearanceFragment : SettingsBaseFragment() {
 

@@ -3,7 +3,7 @@ package com.cafetone.dsp.preference
 import android.content.Context
 import android.util.AttributeSet
 import androidx.preference.Preference
-import me.timschneeberger.rootlessjamesdsp.R
+import com.cafetone.dsp.R
 
 
 open class IconPreference(

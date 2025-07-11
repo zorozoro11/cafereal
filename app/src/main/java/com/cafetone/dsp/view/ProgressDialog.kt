@@ -9,7 +9,7 @@ import androidx.annotation.UiContext
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.getSystemService
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import me.timschneeberger.rootlessjamesdsp.databinding.DialogProgressBinding
+import com.cafetone.dsp.databinding.DialogProgressBinding
 import kotlin.math.roundToInt
 
 class ProgressDialog(

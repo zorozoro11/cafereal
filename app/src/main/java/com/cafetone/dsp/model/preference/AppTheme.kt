@@ -1,6 +1,6 @@
 package com.cafetone.dsp.model.preference
 
-import me.timschneeberger.rootlessjamesdsp.R
+import com.cafetone.dsp.R
 
 enum class AppTheme(val titleResId: Int?) {
     DEFAULT(R.string.theme_default),

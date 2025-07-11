@@ -4,7 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import androidx.activity.result.contract.ActivityResultContract
-import me.timschneeberger.rootlessjamesdsp.activity.AeqSelectorActivity
+import com.cafetone.dsp.activity.AeqSelectorActivity
 
 class AutoEqSelectorContract : ActivityResultContract<Int, String?>() {
 

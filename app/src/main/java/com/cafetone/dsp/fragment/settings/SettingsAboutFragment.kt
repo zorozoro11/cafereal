@@ -10,14 +10,14 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.timschneeberger.rootlessjamesdsp.BuildConfig
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.flavor.UpdateManager
-import me.timschneeberger.rootlessjamesdsp.model.Translator
-import me.timschneeberger.rootlessjamesdsp.utils.Result
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.toast
-import me.timschneeberger.rootlessjamesdsp.utils.isPlugin
-import me.timschneeberger.rootlessjamesdsp.utils.isRoot
+import com.cafetone.dsp.BuildConfig
+import com.cafetone.dsp.R
+import com.cafetone.dsp.flavor.UpdateManager
+import com.cafetone.dsp.model.Translator
+import com.cafetone.dsp.utils.Result
+import com.cafetone.dsp.utils.extensions.ContextExtensions.toast
+import com.cafetone.dsp.utils.isPlugin
+import com.cafetone.dsp.utils.isRoot
 import org.koin.android.ext.android.inject
 import java.util.Locale
 

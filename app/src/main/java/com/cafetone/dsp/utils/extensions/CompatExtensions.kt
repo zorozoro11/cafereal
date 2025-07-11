@@ -6,7 +6,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.os.Parcelable
-import me.timschneeberger.rootlessjamesdsp.utils.sdkAbove
+import com.cafetone.dsp.utils.sdkAbove
 import java.io.Serializable
 
 @Suppress("DEPRECATION")

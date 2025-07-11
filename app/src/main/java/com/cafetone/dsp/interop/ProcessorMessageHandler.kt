@@ -2,9 +2,9 @@ package com.cafetone.dsp.interop
 
 import android.content.Context
 import android.content.Intent
-import me.timschneeberger.rootlessjamesdsp.model.ProcessorMessage
-import me.timschneeberger.rootlessjamesdsp.utils.Constants
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.sendLocalBroadcast
+import com.cafetone.dsp.model.ProcessorMessage
+import com.cafetone.dsp.utils.Constants
+import com.cafetone.dsp.utils.extensions.ContextExtensions.sendLocalBroadcast
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import timber.log.Timber

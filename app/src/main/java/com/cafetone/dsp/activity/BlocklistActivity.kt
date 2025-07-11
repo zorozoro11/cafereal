@@ -1,9 +1,9 @@
 package com.cafetone.dsp.activity
 
 import android.os.Bundle
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.ActivityBlocklistBinding
-import me.timschneeberger.rootlessjamesdsp.fragment.BlocklistFragment
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.ActivityBlocklistBinding
+import com.cafetone.dsp.fragment.BlocklistFragment
 
 class BlocklistActivity : BaseActivity() {
 

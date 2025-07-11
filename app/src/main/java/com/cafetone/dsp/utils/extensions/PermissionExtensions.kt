@@ -6,8 +6,8 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.content.getSystemService
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.CompatExtensions.getApplicationInfoCompat
-import me.timschneeberger.rootlessjamesdsp.utils.sdkAbove
+import com.cafetone.dsp.utils.extensions.CompatExtensions.getApplicationInfoCompat
+import com.cafetone.dsp.utils.sdkAbove
 import timber.log.Timber
 
 object PermissionExtensions {

@@ -2,7 +2,7 @@ package com.cafetone.dsp.view
 
 import android.content.Context
 import android.util.AttributeSet
-import me.timschneeberger.rootlessjamesdsp.interop.JdspImpResToolbox
+import com.cafetone.dsp.interop.JdspImpResToolbox
 
 class EqualizerSurface(context: Context?, attrs: AttributeSet?) : BaseEqualizerSurface(context, attrs, 15, 20.0, 20000.0, -12.0, 12.0, 3.0f) {
     enum class Mode {

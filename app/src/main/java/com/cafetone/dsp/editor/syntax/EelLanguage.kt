@@ -6,7 +6,7 @@ import androidx.core.content.ContextCompat
 import com.amrdeveloper.codeview.Code
 import com.amrdeveloper.codeview.CodeView
 import com.amrdeveloper.codeview.Keyword
-import me.timschneeberger.rootlessjamesdsp.R
+import com.cafetone.dsp.R
 import java.util.ArrayList
 import java.util.HashSet
 import java.util.regex.Pattern

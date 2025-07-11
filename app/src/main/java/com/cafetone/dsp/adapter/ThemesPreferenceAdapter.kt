@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.view.ContextThemeWrapper
 import androidx.recyclerview.widget.RecyclerView
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.PreferenceThemeItemBinding
-import me.timschneeberger.rootlessjamesdsp.delegates.ThemingDelegate
-import me.timschneeberger.rootlessjamesdsp.model.preference.AppTheme
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.getResourceColor
-import me.timschneeberger.rootlessjamesdsp.utils.preferences.Preferences
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.PreferenceThemeItemBinding
+import com.cafetone.dsp.delegates.ThemingDelegate
+import com.cafetone.dsp.model.preference.AppTheme
+import com.cafetone.dsp.utils.extensions.ContextExtensions.getResourceColor
+import com.cafetone.dsp.utils.preferences.Preferences
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

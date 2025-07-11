@@ -13,10 +13,10 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.core.view.setMargins
 import com.google.android.material.checkbox.MaterialCheckBox
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.ViewCardBinding
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.dpToPx
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.asHtml
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.ViewCardBinding
+import com.cafetone.dsp.utils.extensions.ContextExtensions.dpToPx
+import com.cafetone.dsp.utils.extensions.asHtml
 
 
 class Card @JvmOverloads constructor(

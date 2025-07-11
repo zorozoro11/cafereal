@@ -8,12 +8,12 @@ import android.content.res.TypedArray
 import android.util.AttributeSet
 import androidx.preference.Preference
 import androidx.preference.PreferenceViewHolder
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.PreferenceGraphicEqualizerBinding
-import me.timschneeberger.rootlessjamesdsp.model.GraphicEqNodeList
-import me.timschneeberger.rootlessjamesdsp.utils.Constants
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.registerLocalReceiver
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.unregisterLocalReceiver
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.PreferenceGraphicEqualizerBinding
+import com.cafetone.dsp.model.GraphicEqNodeList
+import com.cafetone.dsp.utils.Constants
+import com.cafetone.dsp.utils.extensions.ContextExtensions.registerLocalReceiver
+import com.cafetone.dsp.utils.extensions.ContextExtensions.unregisterLocalReceiver
 import timber.log.Timber
 import java.util.MissingFormatArgumentException
 

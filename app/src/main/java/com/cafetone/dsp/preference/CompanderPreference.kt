@@ -5,9 +5,9 @@ import android.content.res.TypedArray
 import android.util.AttributeSet
 import androidx.preference.DialogPreference
 import androidx.preference.PreferenceViewHolder
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.PreferenceCompanderBinding
-import me.timschneeberger.rootlessjamesdsp.view.CompanderSurface
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.PreferenceCompanderBinding
+import com.cafetone.dsp.view.CompanderSurface
 
 class CompanderPreference : DialogPreference {
 

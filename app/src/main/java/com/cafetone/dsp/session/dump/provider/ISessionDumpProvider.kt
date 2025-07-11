@@ -1,7 +1,7 @@
 package com.cafetone.dsp.session.dump.provider
 
 import android.content.Context
-import me.timschneeberger.rootlessjamesdsp.session.dump.data.ISessionInfoDump
+import com.cafetone.dsp.session.dump.data.ISessionInfoDump
 
 interface ISessionDumpProvider : IDumpProvider {
     /**

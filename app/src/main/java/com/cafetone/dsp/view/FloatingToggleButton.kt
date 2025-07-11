@@ -4,7 +4,7 @@ import android.animation.AnimatorInflater
 import android.content.Context
 import android.util.AttributeSet
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import me.timschneeberger.rootlessjamesdsp.R
+import com.cafetone.dsp.R
 
 class FloatingToggleButton @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null

@@ -17,11 +17,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.yield
-import me.timschneeberger.rootlessjamesdsp.adapter.AppsListAdapter
-import me.timschneeberger.rootlessjamesdsp.databinding.FragmentApplistSheetBinding
-import me.timschneeberger.rootlessjamesdsp.model.AppInfo
-import me.timschneeberger.rootlessjamesdsp.model.ItemViewModel
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.CompatExtensions.getInstalledApplicationsCompat
+import com.cafetone.dsp.adapter.AppsListAdapter
+import com.cafetone.dsp.databinding.FragmentApplistSheetBinding
+import com.cafetone.dsp.model.AppInfo
+import com.cafetone.dsp.model.ItemViewModel
+import com.cafetone.dsp.utils.extensions.CompatExtensions.getInstalledApplicationsCompat
 
 
 class AppsListFragment : BottomSheetDialogFragment() {

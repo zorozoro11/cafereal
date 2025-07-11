@@ -1,9 +1,9 @@
 package com.cafetone.dsp.session.root
 
 import android.content.*
-import me.timschneeberger.rootlessjamesdsp.session.dump.DumpManager
-import me.timschneeberger.rootlessjamesdsp.session.dump.data.ISessionInfoDump
-import me.timschneeberger.rootlessjamesdsp.session.shared.BaseSessionManager
+import com.cafetone.dsp.session.dump.DumpManager
+import com.cafetone.dsp.session.dump.data.ISessionInfoDump
+import com.cafetone.dsp.session.shared.BaseSessionManager
 
 
 class RootSessionDumpManager(context: Context) : BaseSessionManager(context)

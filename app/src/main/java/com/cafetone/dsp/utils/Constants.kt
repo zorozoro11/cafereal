@@ -1,6 +1,6 @@
 package com.cafetone.dsp.utils
 
-import me.timschneeberger.rootlessjamesdsp.BuildConfig
+import com.cafetone.dsp.BuildConfig
 
 object Constants {
     // App-relevant preference namespaces

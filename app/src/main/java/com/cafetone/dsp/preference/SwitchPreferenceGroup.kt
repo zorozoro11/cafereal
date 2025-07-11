@@ -13,8 +13,8 @@ import androidx.preference.PreferenceGroup
 import androidx.preference.PreferenceViewHolder
 import androidx.preference.children
 import com.google.android.material.materialswitch.MaterialSwitch
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.animatedValueAs
+import com.cafetone.dsp.R
+import com.cafetone.dsp.utils.extensions.animatedValueAs
 
 
 @SuppressLint("PrivateResource")

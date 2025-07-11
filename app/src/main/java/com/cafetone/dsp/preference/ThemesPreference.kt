@@ -6,10 +6,10 @@ import androidx.preference.ListPreference
 import androidx.preference.PreferenceViewHolder
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.adapter.ThemesPreferenceAdapter
-import me.timschneeberger.rootlessjamesdsp.model.preference.AppTheme
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.dpToPx
+import com.cafetone.dsp.R
+import com.cafetone.dsp.adapter.ThemesPreferenceAdapter
+import com.cafetone.dsp.model.preference.AppTheme
+import com.cafetone.dsp.utils.extensions.ContextExtensions.dpToPx
 
 class ThemesPreference @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
     ListPreference(context, attrs),

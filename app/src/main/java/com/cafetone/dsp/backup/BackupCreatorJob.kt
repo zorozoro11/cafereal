@@ -15,9 +15,9 @@ import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
 import com.hippo.unifile.UniFile
-import me.timschneeberger.rootlessjamesdsp.utils.notifications.Notifications
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.utils.preferences.Preferences
+import com.cafetone.dsp.utils.notifications.Notifications
+import com.cafetone.dsp.R
+import com.cafetone.dsp.utils.preferences.Preferences
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import timber.log.Timber

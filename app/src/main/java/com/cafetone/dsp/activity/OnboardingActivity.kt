@@ -2,13 +2,13 @@ package com.cafetone.dsp.activity
 
 import android.os.Bundle
 import androidx.core.view.WindowCompat
-import me.timschneeberger.rootlessjamesdsp.BuildConfig
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.ActivityOnboardingBinding
-import me.timschneeberger.rootlessjamesdsp.fragment.OnboardingFragment
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.showAlert
-import me.timschneeberger.rootlessjamesdsp.utils.isRoot
-import me.timschneeberger.rootlessjamesdsp.utils.isRootless
+import com.cafetone.dsp.BuildConfig
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.ActivityOnboardingBinding
+import com.cafetone.dsp.fragment.OnboardingFragment
+import com.cafetone.dsp.utils.extensions.ContextExtensions.showAlert
+import com.cafetone.dsp.utils.isRoot
+import com.cafetone.dsp.utils.isRootless
 
 
 class OnboardingActivity : BaseActivity(){

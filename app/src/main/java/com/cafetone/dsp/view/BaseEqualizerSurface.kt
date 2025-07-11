@@ -13,8 +13,8 @@ import android.util.TypedValue
 import android.view.View
 import androidx.core.content.withStyledAttributes
 import androidx.core.os.bundleOf
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.CompatExtensions.getParcelableAs
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.prettyNumberFormat
+import com.cafetone.dsp.utils.extensions.CompatExtensions.getParcelableAs
+import com.cafetone.dsp.utils.extensions.prettyNumberFormat
 import timber.log.Timber
 import java.util.Locale
 import kotlin.math.abs

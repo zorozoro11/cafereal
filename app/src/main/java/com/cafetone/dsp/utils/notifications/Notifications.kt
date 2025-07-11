@@ -6,11 +6,11 @@ import androidx.core.app.NotificationManagerCompat.IMPORTANCE_DEFAULT
 import androidx.core.app.NotificationManagerCompat.IMPORTANCE_HIGH
 import androidx.core.app.NotificationManagerCompat.IMPORTANCE_LOW
 import androidx.core.app.NotificationManagerCompat.IMPORTANCE_NONE
-import me.timschneeberger.rootlessjamesdsp.BuildConfig
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.buildNotificationChannel
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.buildNotificationChannelGroup
-import me.timschneeberger.rootlessjamesdsp.utils.isRootless
+import com.cafetone.dsp.BuildConfig
+import com.cafetone.dsp.R
+import com.cafetone.dsp.utils.extensions.buildNotificationChannel
+import com.cafetone.dsp.utils.extensions.buildNotificationChannelGroup
+import com.cafetone.dsp.utils.isRootless
 
 /**
  * Class to manage the basic information of all the notifications used in the app.

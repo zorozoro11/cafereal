@@ -1,12 +1,12 @@
 package com.cafetone.dsp.session.dump.provider
 
 import android.content.Context
-import me.timschneeberger.rootlessjamesdsp.model.AudioSessionDumpEntry
-import me.timschneeberger.rootlessjamesdsp.session.dump.data.AudioServiceDump
-import me.timschneeberger.rootlessjamesdsp.session.dump.data.ISessionInfoDump
-import me.timschneeberger.rootlessjamesdsp.session.dump.utils.AudioFlingerServiceDumpUtils
-import me.timschneeberger.rootlessjamesdsp.session.dump.utils.DumpUtils
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.getPackageNameFromUid
+import com.cafetone.dsp.model.AudioSessionDumpEntry
+import com.cafetone.dsp.session.dump.data.AudioServiceDump
+import com.cafetone.dsp.session.dump.data.ISessionInfoDump
+import com.cafetone.dsp.session.dump.utils.AudioFlingerServiceDumpUtils
+import com.cafetone.dsp.session.dump.utils.DumpUtils
+import com.cafetone.dsp.utils.extensions.ContextExtensions.getPackageNameFromUid
 import timber.log.Timber
 
 class AudioServiceDumpProvider : ISessionDumpProvider {

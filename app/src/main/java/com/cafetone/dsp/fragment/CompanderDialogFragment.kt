@@ -9,12 +9,12 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.content.edit
 import androidx.preference.PreferenceDialogFragmentCompat
-import me.timschneeberger.rootlessjamesdsp.databinding.PreferenceCompanderDialogBinding
-import me.timschneeberger.rootlessjamesdsp.preference.CompanderPreference
-import me.timschneeberger.rootlessjamesdsp.utils.Constants
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.registerLocalReceiver
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.unregisterLocalReceiver
-import me.timschneeberger.rootlessjamesdsp.view.CompanderSurface
+import com.cafetone.dsp.databinding.PreferenceCompanderDialogBinding
+import com.cafetone.dsp.preference.CompanderPreference
+import com.cafetone.dsp.utils.Constants
+import com.cafetone.dsp.utils.extensions.ContextExtensions.registerLocalReceiver
+import com.cafetone.dsp.utils.extensions.ContextExtensions.unregisterLocalReceiver
+import com.cafetone.dsp.view.CompanderSurface
 
 class CompanderDialogFragment : PreferenceDialogFragmentCompat() {
 

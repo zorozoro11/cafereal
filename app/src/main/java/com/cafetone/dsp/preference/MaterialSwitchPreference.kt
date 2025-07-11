@@ -2,7 +2,7 @@ package com.cafetone.dsp.preference
 import android.content.Context
 import android.util.AttributeSet
 import androidx.preference.SwitchPreferenceCompat
-import me.timschneeberger.rootlessjamesdsp.R
+import com.cafetone.dsp.R
 
 
 class MaterialSwitchPreference : SwitchPreferenceCompat {

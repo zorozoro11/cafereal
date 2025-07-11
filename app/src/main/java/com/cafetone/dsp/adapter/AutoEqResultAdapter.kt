@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.model.api.AeqSearchResult
+import com.cafetone.dsp.R
+import com.cafetone.dsp.model.api.AeqSearchResult
 
 class AutoEqResultAdapter(
     var results: Array<AeqSearchResult>

@@ -4,9 +4,9 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.preference.Preference
 import androidx.preference.PreferenceViewHolder
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.PreferenceAppiconBinding
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.getAppName
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.PreferenceAppiconBinding
+import com.cafetone.dsp.utils.extensions.ContextExtensions.getAppName
 
 class AppIconPreference : Preference {
 

@@ -1,6 +1,6 @@
 package com.cafetone.dsp.session.dump.data
 
-import me.timschneeberger.rootlessjamesdsp.model.AudioSessionDumpEntry
+import com.cafetone.dsp.model.AudioSessionDumpEntry
 
 data class AudioPolicyServiceDump(override val sessions: HashMap<Int /* sid */, AudioSessionDumpEntry>,
                                   override val capturePermissionLog: HashMap<String /* package */, Boolean /* captureAllowed */>) :

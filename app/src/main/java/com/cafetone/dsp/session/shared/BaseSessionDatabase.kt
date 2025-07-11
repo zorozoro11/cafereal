@@ -2,9 +2,9 @@ package com.cafetone.dsp.session.shared
 
 import android.content.Context
 import android.os.Process.myUid
-import me.timschneeberger.rootlessjamesdsp.model.AudioSessionDumpEntry
-import me.timschneeberger.rootlessjamesdsp.model.IEffectSession
-import me.timschneeberger.rootlessjamesdsp.session.dump.data.ISessionInfoDump
+import com.cafetone.dsp.model.AudioSessionDumpEntry
+import com.cafetone.dsp.model.IEffectSession
+import com.cafetone.dsp.session.dump.data.ISessionInfoDump
 import timber.log.Timber
 
 abstract class BaseSessionDatabase(protected val context: Context) {

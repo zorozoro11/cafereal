@@ -3,7 +3,7 @@ package com.cafetone.dsp.interop
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.annotation.StringRes
-import me.timschneeberger.rootlessjamesdsp.flavor.CrashlyticsImpl
+import com.cafetone.dsp.flavor.CrashlyticsImpl
 import kotlin.reflect.KClass
 
 class PreferenceCache(val context: Context) {

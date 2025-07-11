@@ -9,14 +9,14 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.hippo.unifile.UniFile
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.activity.SettingsActivity
-import me.timschneeberger.rootlessjamesdsp.backup.BackupCreatorJob
-import me.timschneeberger.rootlessjamesdsp.backup.BackupManager
-import me.timschneeberger.rootlessjamesdsp.backup.BackupRestoreService
-import me.timschneeberger.rootlessjamesdsp.utils.Constants
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.toast
-import me.timschneeberger.rootlessjamesdsp.utils.preferences.Preferences
+import com.cafetone.dsp.R
+import com.cafetone.dsp.activity.SettingsActivity
+import com.cafetone.dsp.backup.BackupCreatorJob
+import com.cafetone.dsp.backup.BackupManager
+import com.cafetone.dsp.backup.BackupRestoreService
+import com.cafetone.dsp.utils.Constants
+import com.cafetone.dsp.utils.extensions.ContextExtensions.toast
+import com.cafetone.dsp.utils.preferences.Preferences
 import org.koin.android.ext.android.inject
 
 class SettingsBackupFragment : SettingsBaseFragment() {

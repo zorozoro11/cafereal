@@ -1,6 +1,6 @@
 package com.cafetone.dsp.session.dump.data
 
-import me.timschneeberger.rootlessjamesdsp.model.AppInfo
+import com.cafetone.dsp.model.AppInfo
 
 data class PackageServiceDump(val apps: List<AppInfo>) : IDump {
     override fun toString(): String {

@@ -6,8 +6,8 @@ import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.ViewNumberInputBoxBinding
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.ViewNumberInputBoxBinding
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import java.util.*

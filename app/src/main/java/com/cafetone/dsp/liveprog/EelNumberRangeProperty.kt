@@ -1,6 +1,6 @@
 package com.cafetone.dsp.liveprog
 
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.equalsDelta
+import com.cafetone.dsp.utils.extensions.equalsDelta
 import timber.log.Timber
 import java.util.Locale
 import kotlin.math.floor

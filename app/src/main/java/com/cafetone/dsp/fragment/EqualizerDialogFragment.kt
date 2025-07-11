@@ -10,14 +10,14 @@ import android.view.View
 import androidx.core.content.edit
 import androidx.preference.PreferenceDialogFragmentCompat
 import com.google.android.material.chip.Chip
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.PreferenceEqualizerDialogBinding
-import me.timschneeberger.rootlessjamesdsp.interop.PreferenceCache
-import me.timschneeberger.rootlessjamesdsp.preference.EqualizerPreference
-import me.timschneeberger.rootlessjamesdsp.utils.Constants
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.registerLocalReceiver
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.unregisterLocalReceiver
-import me.timschneeberger.rootlessjamesdsp.view.EqualizerSurface
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.PreferenceEqualizerDialogBinding
+import com.cafetone.dsp.interop.PreferenceCache
+import com.cafetone.dsp.preference.EqualizerPreference
+import com.cafetone.dsp.utils.Constants
+import com.cafetone.dsp.utils.extensions.ContextExtensions.registerLocalReceiver
+import com.cafetone.dsp.utils.extensions.ContextExtensions.unregisterLocalReceiver
+import com.cafetone.dsp.view.EqualizerSurface
 import timber.log.Timber
 
 class EqualizerDialogFragment : PreferenceDialogFragmentCompat() {

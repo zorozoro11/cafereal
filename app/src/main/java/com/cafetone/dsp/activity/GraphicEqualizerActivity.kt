@@ -1,9 +1,9 @@
 package com.cafetone.dsp.activity
 
 import android.os.Bundle
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.ActivityGraphicEqBinding
-import me.timschneeberger.rootlessjamesdsp.fragment.GraphicEqualizerFragment
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.ActivityGraphicEqBinding
+import com.cafetone.dsp.fragment.GraphicEqualizerFragment
 
 class GraphicEqualizerActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

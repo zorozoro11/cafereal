@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import me.timschneeberger.rootlessjamesdsp.databinding.FragmentLibraryLoadErrorBinding
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.openPlayStoreApp
+import com.cafetone.dsp.databinding.FragmentLibraryLoadErrorBinding
+import com.cafetone.dsp.utils.extensions.ContextExtensions.openPlayStoreApp
 
 class LibraryLoadErrorFragment : Fragment() {
     private lateinit var binding: FragmentLibraryLoadErrorBinding

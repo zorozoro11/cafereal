@@ -7,11 +7,11 @@ import android.os.Bundle
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.getSystemService
-import me.timschneeberger.rootlessjamesdsp.service.RootAudioProcessorService
-import me.timschneeberger.rootlessjamesdsp.service.RootlessAudioProcessorService
-import me.timschneeberger.rootlessjamesdsp.utils.SdkCheck
-import me.timschneeberger.rootlessjamesdsp.utils.isRoot
-import me.timschneeberger.rootlessjamesdsp.utils.sdkAbove
+import com.cafetone.dsp.service.RootAudioProcessorService
+import com.cafetone.dsp.service.RootlessAudioProcessorService
+import com.cafetone.dsp.utils.SdkCheck
+import com.cafetone.dsp.utils.isRoot
+import com.cafetone.dsp.utils.sdkAbove
 import timber.log.Timber
 
 /**

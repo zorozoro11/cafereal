@@ -1,6 +1,6 @@
 package com.cafetone.dsp.api
 
-import me.timschneeberger.rootlessjamesdsp.model.api.AeqSearchResult
+import com.cafetone.dsp.model.api.AeqSearchResult
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

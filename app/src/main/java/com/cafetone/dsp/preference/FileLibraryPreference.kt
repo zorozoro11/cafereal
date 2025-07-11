@@ -5,9 +5,9 @@ import android.content.res.TypedArray
 import android.util.AttributeSet
 import androidx.preference.ListPreference
 import androidx.preference.Preference.SummaryProvider
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.model.preset.Preset
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.toast
+import com.cafetone.dsp.R
+import com.cafetone.dsp.model.preset.Preset
+import com.cafetone.dsp.utils.extensions.ContextExtensions.toast
 import timber.log.Timber
 import java.io.File
 import java.io.InputStream

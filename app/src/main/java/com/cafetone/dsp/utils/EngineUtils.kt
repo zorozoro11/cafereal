@@ -3,11 +3,11 @@ package com.cafetone.dsp.utils
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.activity.EngineLauncherActivity
-import me.timschneeberger.rootlessjamesdsp.service.BaseAudioProcessorService
-import me.timschneeberger.rootlessjamesdsp.service.RootlessAudioProcessorService
-import me.timschneeberger.rootlessjamesdsp.utils.preferences.Preferences
+import com.cafetone.dsp.R
+import com.cafetone.dsp.activity.EngineLauncherActivity
+import com.cafetone.dsp.service.BaseAudioProcessorService
+import com.cafetone.dsp.service.RootlessAudioProcessorService
+import com.cafetone.dsp.utils.preferences.Preferences
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

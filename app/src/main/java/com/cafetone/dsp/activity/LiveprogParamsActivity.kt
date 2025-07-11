@@ -3,9 +3,9 @@ package com.cafetone.dsp.activity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.ActivityLiveprogParamsBinding
-import me.timschneeberger.rootlessjamesdsp.fragment.LiveprogParamsFragment
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.ActivityLiveprogParamsBinding
+import com.cafetone.dsp.fragment.LiveprogParamsFragment
 
 class LiveprogParamsActivity : BaseActivity() {
     private var showReset = false

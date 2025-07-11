@@ -7,11 +7,11 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.ActivitySettingsBinding
-import me.timschneeberger.rootlessjamesdsp.fragment.settings.SettingsAboutFragment
-import me.timschneeberger.rootlessjamesdsp.fragment.settings.SettingsBackupFragment
-import me.timschneeberger.rootlessjamesdsp.fragment.settings.SettingsFragment
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.ActivitySettingsBinding
+import com.cafetone.dsp.fragment.settings.SettingsAboutFragment
+import com.cafetone.dsp.fragment.settings.SettingsBackupFragment
+import com.cafetone.dsp.fragment.settings.SettingsFragment
 
 class SettingsActivity : BaseActivity(),
     PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {

@@ -9,9 +9,9 @@ import android.widget.TextView
 import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableList
 import androidx.recyclerview.widget.RecyclerView
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.model.GraphicEqNode
-import me.timschneeberger.rootlessjamesdsp.model.GraphicEqNodeList
+import com.cafetone.dsp.R
+import com.cafetone.dsp.model.GraphicEqNode
+import com.cafetone.dsp.model.GraphicEqNodeList
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import java.util.*

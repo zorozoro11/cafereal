@@ -2,11 +2,11 @@ package com.cafetone.dsp.session.rootless
 
 import android.content.Context
 import android.content.Intent
-import me.timschneeberger.rootlessjamesdsp.model.AudioSessionDumpEntry
-import me.timschneeberger.rootlessjamesdsp.model.IEffectSession
-import me.timschneeberger.rootlessjamesdsp.model.rootless.MutedEffectSession
-import me.timschneeberger.rootlessjamesdsp.session.shared.BaseSessionDatabase
-import me.timschneeberger.rootlessjamesdsp.utils.MutedAudioEffectFactory
+import com.cafetone.dsp.model.AudioSessionDumpEntry
+import com.cafetone.dsp.model.IEffectSession
+import com.cafetone.dsp.model.rootless.MutedEffectSession
+import com.cafetone.dsp.session.shared.BaseSessionDatabase
+import com.cafetone.dsp.utils.MutedAudioEffectFactory
 import timber.log.Timber
 
 class RootlessSessionDatabase(context: Context) : BaseSessionDatabase(context) {

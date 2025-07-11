@@ -8,7 +8,7 @@ import android.view.View
 import androidx.appcompat.widget.PopupMenu
 import androidx.preference.ListPreference
 import androidx.preference.PreferenceViewHolder
-import me.timschneeberger.rootlessjamesdsp.R
+import com.cafetone.dsp.R
 
 
 /**

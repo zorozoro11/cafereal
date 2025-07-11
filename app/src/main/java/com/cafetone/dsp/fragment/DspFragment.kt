@@ -13,10 +13,10 @@ import androidx.fragment.app.Fragment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.FragmentDspBinding
-import me.timschneeberger.rootlessjamesdsp.utils.Constants
-import me.timschneeberger.rootlessjamesdsp.utils.preferences.Preferences
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.FragmentDspBinding
+import com.cafetone.dsp.utils.Constants
+import com.cafetone.dsp.utils.preferences.Preferences
 import org.koin.android.ext.android.inject
 import timber.log.Timber
 import java.util.Locale

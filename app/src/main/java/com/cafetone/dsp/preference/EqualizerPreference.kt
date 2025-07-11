@@ -6,11 +6,11 @@ import android.content.res.TypedArray
 import android.util.AttributeSet
 import androidx.preference.DialogPreference
 import androidx.preference.PreferenceViewHolder
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.PreferenceEqualizerBinding
-import me.timschneeberger.rootlessjamesdsp.interop.PreferenceCache
-import me.timschneeberger.rootlessjamesdsp.utils.Constants
-import me.timschneeberger.rootlessjamesdsp.view.EqualizerSurface
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.PreferenceEqualizerBinding
+import com.cafetone.dsp.interop.PreferenceCache
+import com.cafetone.dsp.utils.Constants
+import com.cafetone.dsp.view.EqualizerSurface
 
 class EqualizerPreference : DialogPreference, SharedPreferences.OnSharedPreferenceChangeListener {
 

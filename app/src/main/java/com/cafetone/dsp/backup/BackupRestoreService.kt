@@ -15,12 +15,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
-import me.timschneeberger.rootlessjamesdsp.BuildConfig
-import me.timschneeberger.rootlessjamesdsp.utils.SdkCheck
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.CompatExtensions.getParcelableAs
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.acquireWakeLock
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.isServiceRunning
-import me.timschneeberger.rootlessjamesdsp.utils.notifications.Notifications
+import com.cafetone.dsp.BuildConfig
+import com.cafetone.dsp.utils.SdkCheck
+import com.cafetone.dsp.utils.extensions.CompatExtensions.getParcelableAs
+import com.cafetone.dsp.utils.extensions.ContextExtensions.acquireWakeLock
+import com.cafetone.dsp.utils.extensions.ContextExtensions.isServiceRunning
+import com.cafetone.dsp.utils.notifications.Notifications
 import timber.log.Timber
 
 /**

@@ -9,8 +9,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.model.room.BlockedApp
+import com.cafetone.dsp.R
+import com.cafetone.dsp.model.room.BlockedApp
 
 class AppBlocklistAdapter : ListAdapter<BlockedApp, AppBlocklistAdapter.AppBlocklistViewHolder>(BlockedAppComparator()) {
 

@@ -2,7 +2,7 @@ package com.cafetone.dsp.view
 
 import android.content.Context
 import android.util.AttributeSet
-import me.timschneeberger.rootlessjamesdsp.interop.JdspImpResToolbox
+import com.cafetone.dsp.interop.JdspImpResToolbox
 
 class CompanderSurface(context: Context?, attrs: AttributeSet?) : BaseEqualizerSurface(context, attrs, 7, 40.0, 20000.0, -1.2, 1.2, 0.2f) {
     override fun computeCurve(

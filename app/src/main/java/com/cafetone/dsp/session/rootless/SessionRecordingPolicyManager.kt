@@ -2,9 +2,9 @@ package com.cafetone.dsp.session.rootless
 
 import android.content.Context
 import android.content.pm.PackageManager
-import me.timschneeberger.rootlessjamesdsp.model.rootless.SessionRecordingPolicyEntry
-import me.timschneeberger.rootlessjamesdsp.session.dump.data.ISessionPolicyInfoDump
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.CompatExtensions.getApplicationInfoCompat
+import com.cafetone.dsp.model.rootless.SessionRecordingPolicyEntry
+import com.cafetone.dsp.session.dump.data.ISessionPolicyInfoDump
+import com.cafetone.dsp.utils.extensions.CompatExtensions.getApplicationInfoCompat
 import timber.log.Timber
 
 

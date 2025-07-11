@@ -2,9 +2,9 @@ package com.cafetone.dsp.fragment.settings
 
 import android.os.Bundle
 import androidx.preference.Preference
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.utils.Constants
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.showAlert
+import com.cafetone.dsp.R
+import com.cafetone.dsp.utils.Constants
+import com.cafetone.dsp.utils.extensions.ContextExtensions.showAlert
 
 class SettingsDeviceProfilesFragment : SettingsBaseFragment() {
 

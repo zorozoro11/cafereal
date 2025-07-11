@@ -9,7 +9,7 @@ import android.view.View
 import androidx.annotation.AttrRes
 import androidx.core.content.res.ResourcesCompat
 import com.google.android.material.color.DynamicColors
-import me.timschneeberger.rootlessjamesdsp.utils.SdkCheck
+import com.cafetone.dsp.utils.SdkCheck
 import java.io.File
 import java.math.BigDecimal
 import java.math.RoundingMode

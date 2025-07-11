@@ -2,8 +2,8 @@ package com.cafetone.dsp.model.root
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import me.timschneeberger.rootlessjamesdsp.interop.JamesDspRemoteEngine
-import me.timschneeberger.rootlessjamesdsp.model.IEffectSession
+import com.cafetone.dsp.interop.JamesDspRemoteEngine
+import com.cafetone.dsp.model.IEffectSession
 
 data class RemoteEffectSession(
     override var packageName: String,

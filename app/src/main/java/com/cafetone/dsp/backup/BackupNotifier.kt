@@ -6,8 +6,8 @@ import android.graphics.BitmapFactory
 import androidx.core.app.NotificationCompat
 import androidx.core.content.getSystemService
 import com.hippo.unifile.UniFile
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.utils.notifications.Notifications
+import com.cafetone.dsp.R
+import com.cafetone.dsp.utils.notifications.Notifications
 
 
 class BackupNotifier(private val context: Context) {

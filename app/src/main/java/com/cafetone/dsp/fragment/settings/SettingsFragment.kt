@@ -2,9 +2,9 @@ package com.cafetone.dsp.fragment.settings
 
 import android.os.Bundle
 import androidx.preference.Preference
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.utils.isPlugin
-import me.timschneeberger.rootlessjamesdsp.utils.isRootless
+import com.cafetone.dsp.R
+import com.cafetone.dsp.utils.isPlugin
+import com.cafetone.dsp.utils.isRootless
 
 
 class SettingsFragment : SettingsBaseFragment() {

@@ -9,8 +9,8 @@ import android.widget.TextView
 import com.amrdeveloper.codeview.Code
 import com.amrdeveloper.codeview.CodeViewAdapter
 import com.amrdeveloper.codeview.Keyword
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.editor.syntax.Function
+import com.cafetone.dsp.R
+import com.cafetone.dsp.editor.syntax.Function
 
 class CustomCodeViewAdapter(
     context: Context,

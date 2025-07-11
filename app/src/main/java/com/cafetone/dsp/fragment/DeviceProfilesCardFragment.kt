@@ -8,14 +8,14 @@ import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceScreen
 import androidx.recyclerview.widget.RecyclerView
-import me.timschneeberger.rootlessjamesdsp.MainApplication
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.adapter.RoundedRipplePreferenceGroupAdapter
-import me.timschneeberger.rootlessjamesdsp.preference.DropDownPreference
-import me.timschneeberger.rootlessjamesdsp.utils.RoutingObserver
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.showChoiceAlert
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.showMultipleChoiceAlert
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.toast
+import com.cafetone.dsp.MainApplication
+import com.cafetone.dsp.R
+import com.cafetone.dsp.adapter.RoundedRipplePreferenceGroupAdapter
+import com.cafetone.dsp.preference.DropDownPreference
+import com.cafetone.dsp.utils.RoutingObserver
+import com.cafetone.dsp.utils.extensions.ContextExtensions.showChoiceAlert
+import com.cafetone.dsp.utils.extensions.ContextExtensions.showMultipleChoiceAlert
+import com.cafetone.dsp.utils.extensions.ContextExtensions.toast
 import org.koin.android.ext.android.inject
 
 class DeviceProfilesCardFragment : PreferenceFragmentCompat(), RoutingObserver.RoutingChangedCallback {

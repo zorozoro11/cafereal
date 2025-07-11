@@ -1,10 +1,10 @@
 package com.cafetone.dsp.session.dump.provider
 
 import android.content.Context
-import me.timschneeberger.rootlessjamesdsp.model.AppInfo
-import me.timschneeberger.rootlessjamesdsp.session.dump.data.PackageServiceDump
-import me.timschneeberger.rootlessjamesdsp.session.dump.utils.DumpUtils
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.PermissionExtensions.hasPackageUsagePermission
+import com.cafetone.dsp.model.AppInfo
+import com.cafetone.dsp.session.dump.data.PackageServiceDump
+import com.cafetone.dsp.session.dump.utils.DumpUtils
+import com.cafetone.dsp.utils.extensions.PermissionExtensions.hasPackageUsagePermission
 import timber.log.Timber
 
 class PackageServiceDumpProvider : IDumpProvider {

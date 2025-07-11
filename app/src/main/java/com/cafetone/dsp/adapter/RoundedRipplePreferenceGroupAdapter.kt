@@ -5,7 +5,7 @@ import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceGroup
 import androidx.preference.PreferenceGroupAdapter
 import androidx.preference.PreferenceViewHolder
-import me.timschneeberger.rootlessjamesdsp.R
+import com.cafetone.dsp.R
 
 @SuppressLint("RestrictedApi")
 class RoundedRipplePreferenceGroupAdapter(preferenceGroup: PreferenceGroup) : PreferenceGroupAdapter(preferenceGroup) {

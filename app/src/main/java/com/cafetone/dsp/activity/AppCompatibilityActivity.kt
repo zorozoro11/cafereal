@@ -3,11 +3,11 @@ package com.cafetone.dsp.activity
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.databinding.ActivityAppCompatibilityBinding
-import me.timschneeberger.rootlessjamesdsp.fragment.AppCompatibilityFragment
-import me.timschneeberger.rootlessjamesdsp.service.RootlessAudioProcessorService
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.CompatExtensions.getParcelableAs
+import com.cafetone.dsp.R
+import com.cafetone.dsp.databinding.ActivityAppCompatibilityBinding
+import com.cafetone.dsp.fragment.AppCompatibilityFragment
+import com.cafetone.dsp.service.RootlessAudioProcessorService
+import com.cafetone.dsp.utils.extensions.CompatExtensions.getParcelableAs
 
 class AppCompatibilityActivity : BaseActivity() {
     @SuppressLint("InlinedApi")

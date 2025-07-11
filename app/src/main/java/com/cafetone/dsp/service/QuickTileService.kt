@@ -8,16 +8,16 @@ import android.content.IntentFilter
 import android.content.SharedPreferences
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
-import me.timschneeberger.rootlessjamesdsp.MainApplication
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.utils.Constants
-import me.timschneeberger.rootlessjamesdsp.utils.EngineUtils.toggleEnginePower
-import me.timschneeberger.rootlessjamesdsp.utils.SdkCheck
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.registerLocalReceiver
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.unregisterLocalReceiver
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.PermissionExtensions.hasProjectMediaAppOp
-import me.timschneeberger.rootlessjamesdsp.utils.isRootless
-import me.timschneeberger.rootlessjamesdsp.utils.preferences.Preferences
+import com.cafetone.dsp.MainApplication
+import com.cafetone.dsp.R
+import com.cafetone.dsp.utils.Constants
+import com.cafetone.dsp.utils.EngineUtils.toggleEnginePower
+import com.cafetone.dsp.utils.SdkCheck
+import com.cafetone.dsp.utils.extensions.ContextExtensions.registerLocalReceiver
+import com.cafetone.dsp.utils.extensions.ContextExtensions.unregisterLocalReceiver
+import com.cafetone.dsp.utils.extensions.PermissionExtensions.hasProjectMediaAppOp
+import com.cafetone.dsp.utils.isRootless
+import com.cafetone.dsp.utils.preferences.Preferences
 import org.koin.android.ext.android.inject
 import org.koin.core.component.KoinComponent
 

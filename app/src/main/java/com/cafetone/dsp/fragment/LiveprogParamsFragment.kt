@@ -9,21 +9,21 @@ import android.view.*
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceScreen
 import androidx.recyclerview.widget.RecyclerView
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.activity.LiveprogParamsActivity
-import me.timschneeberger.rootlessjamesdsp.adapter.RoundedRipplePreferenceGroupAdapter
-import me.timschneeberger.rootlessjamesdsp.interop.PreferenceCache
-import me.timschneeberger.rootlessjamesdsp.liveprog.EelListProperty
-import me.timschneeberger.rootlessjamesdsp.liveprog.EelNumberRangeProperty
-import me.timschneeberger.rootlessjamesdsp.liveprog.EelParser
-import me.timschneeberger.rootlessjamesdsp.preference.DropDownPreference
-import me.timschneeberger.rootlessjamesdsp.preference.MaterialSeekbarPreference
-import me.timschneeberger.rootlessjamesdsp.utils.Constants
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.registerLocalReceiver
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.sendLocalBroadcast
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.toast
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.unregisterLocalReceiver
-import me.timschneeberger.rootlessjamesdsp.utils.preferences.NonPersistentDatastore
+import com.cafetone.dsp.R
+import com.cafetone.dsp.activity.LiveprogParamsActivity
+import com.cafetone.dsp.adapter.RoundedRipplePreferenceGroupAdapter
+import com.cafetone.dsp.interop.PreferenceCache
+import com.cafetone.dsp.liveprog.EelListProperty
+import com.cafetone.dsp.liveprog.EelNumberRangeProperty
+import com.cafetone.dsp.liveprog.EelParser
+import com.cafetone.dsp.preference.DropDownPreference
+import com.cafetone.dsp.preference.MaterialSeekbarPreference
+import com.cafetone.dsp.utils.Constants
+import com.cafetone.dsp.utils.extensions.ContextExtensions.registerLocalReceiver
+import com.cafetone.dsp.utils.extensions.ContextExtensions.sendLocalBroadcast
+import com.cafetone.dsp.utils.extensions.ContextExtensions.toast
+import com.cafetone.dsp.utils.extensions.ContextExtensions.unregisterLocalReceiver
+import com.cafetone.dsp.utils.preferences.NonPersistentDatastore
 import timber.log.Timber
 
 class LiveprogParamsFragment : PreferenceFragmentCompat(), NonPersistentDatastore.OnPreferenceChanged {

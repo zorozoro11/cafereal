@@ -5,13 +5,13 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.media.audiofx.AudioEffect
-import me.timschneeberger.rootlessjamesdsp.BuildConfig
-import me.timschneeberger.rootlessjamesdsp.service.RootAudioProcessorService
-import me.timschneeberger.rootlessjamesdsp.session.rootless.RootlessSessionDatabase
-import me.timschneeberger.rootlessjamesdsp.utils.Constants
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.ContextExtensions.sendLocalBroadcast
-import me.timschneeberger.rootlessjamesdsp.utils.isPlugin
-import me.timschneeberger.rootlessjamesdsp.utils.isRoot
+import com.cafetone.dsp.BuildConfig
+import com.cafetone.dsp.service.RootAudioProcessorService
+import com.cafetone.dsp.session.rootless.RootlessSessionDatabase
+import com.cafetone.dsp.utils.Constants
+import com.cafetone.dsp.utils.extensions.ContextExtensions.sendLocalBroadcast
+import com.cafetone.dsp.utils.isPlugin
+import com.cafetone.dsp.utils.isRoot
 import timber.log.Timber
 
 class SessionReceiver : BroadcastReceiver() {

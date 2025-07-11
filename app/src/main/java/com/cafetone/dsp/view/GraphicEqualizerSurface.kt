@@ -9,9 +9,9 @@ import android.util.TypedValue
 import android.view.View
 import androidx.core.content.withStyledAttributes
 import androidx.core.os.bundleOf
-import me.timschneeberger.rootlessjamesdsp.model.GraphicEqNodeList
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.CompatExtensions.getParcelableAs
-import me.timschneeberger.rootlessjamesdsp.utils.extensions.prettyNumberFormat
+import com.cafetone.dsp.model.GraphicEqNodeList
+import com.cafetone.dsp.utils.extensions.CompatExtensions.getParcelableAs
+import com.cafetone.dsp.utils.extensions.prettyNumberFormat
 import java.util.*
 import kotlin.math.*
 

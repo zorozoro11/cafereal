@@ -2,11 +2,11 @@ package com.cafetone.dsp.api
 
 import android.content.Context
 import com.pluto.plugins.network.PlutoInterceptor
-import me.timschneeberger.rootlessjamesdsp.BuildConfig
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.flavor.CrashlyticsImpl
-import me.timschneeberger.rootlessjamesdsp.model.api.AeqSearchResult
-import me.timschneeberger.rootlessjamesdsp.utils.preferences.Preferences
+import com.cafetone.dsp.BuildConfig
+import com.cafetone.dsp.R
+import com.cafetone.dsp.flavor.CrashlyticsImpl
+import com.cafetone.dsp.model.api.AeqSearchResult
+import com.cafetone.dsp.utils.preferences.Preferences
 import okhttp3.OkHttpClient
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject

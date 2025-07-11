@@ -6,11 +6,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.getSystemService
-import me.timschneeberger.rootlessjamesdsp.MainApplication
-import me.timschneeberger.rootlessjamesdsp.R
-import me.timschneeberger.rootlessjamesdsp.delegates.ThemingDelegate
-import me.timschneeberger.rootlessjamesdsp.delegates.ThemingDelegateImpl
-import me.timschneeberger.rootlessjamesdsp.utils.preferences.Preferences
+import com.cafetone.dsp.MainApplication
+import com.cafetone.dsp.R
+import com.cafetone.dsp.delegates.ThemingDelegate
+import com.cafetone.dsp.delegates.ThemingDelegateImpl
+import com.cafetone.dsp.utils.preferences.Preferences
 import org.koin.android.ext.android.inject
 import org.koin.core.component.KoinComponent
 

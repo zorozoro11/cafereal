@@ -1,7 +1,7 @@
 package com.cafetone.dsp.interop
 
-import me.timschneeberger.rootlessjamesdsp.interop.structure.EelVmVariable
-import me.timschneeberger.rootlessjamesdsp.model.ProcessorMessage
+import com.cafetone.dsp.interop.structure.EelVmVariable
+import com.cafetone.dsp.model.ProcessorMessage
 
 typealias JamesDspHandle = Long
 

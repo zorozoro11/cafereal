@@ -1,7 +1,7 @@
 package com.cafetone.dsp.model.rootless
 
 import android.media.audiofx.AudioEffect
-import me.timschneeberger.rootlessjamesdsp.model.IEffectSession
+import com.cafetone.dsp.model.IEffectSession
 
 data class MutedEffectSession(
     override var uid: Int,
