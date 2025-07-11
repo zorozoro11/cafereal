@@ -112,6 +112,10 @@ class RootlessAudioProcessorService : BaseAudioProcessorService() {
             recreateRecorderRequested = true
     }
 
+    override fun getDspEngine(): JamesDspLocalEngine? {
+        return if (::engine.isInitialized) engine else null
+    }
+
     override fun onCreate() {
         super.onCreate()
 
