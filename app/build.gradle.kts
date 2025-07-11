@@ -15,14 +15,16 @@ android {
 
     val SUPPORTED_ABIS = setOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
     compileSdk = AndroidConfig.compileSdk
-    project.setProperty("archivesBaseName", "RootlessJamesDSP-v${AndroidConfig.versionName}")
+    project.setProperty("archivesBaseName", "Cafetone-v${AndroidConfig.versionName}")
 
     defaultConfig {
         targetSdk = AndroidConfig.targetSdk
         versionCode = AndroidConfig.versionCode
         versionName = AndroidConfig.versionName
+        applicationId = "com.cafetone.dsp"
+        minSdk = AndroidConfig.minSdk
 
-        manifestPlaceholders["label"] = "RootlessJamesDSP"
+        manifestPlaceholders["label"] = "Cafetone"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -31,6 +33,8 @@ android {
         buildConfigField("String", "BUILD_TIME", "\"${getBuildTime()}\"")
         buildConfigField("boolean", "PREVIEW", "false")
         buildConfigField("boolean", "PLUGIN", "false")
+        buildConfigField("boolean", "ROOTLESS", "true")
+        buildConfigField("boolean", "FOSS_ONLY", "false")
 
         externalNativeBuild {
             cmake {
