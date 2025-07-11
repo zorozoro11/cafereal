@@ -131,4 +131,9 @@
     <string name="key_limiter_threshold" translatable="false">limiter_threshold</string>
     <string name="key_limiter_release" translatable="false">limiter_release</string>
     <string name="key_output_postgain" translatable="false">output_postgain</string>
+    
+    <!-- Café Mode -->
+    <string name="key_cafe_intensity" translatable="false">cafe_intensity</string>
+    <string name="key_cafe_spatial_width" translatable="false">cafe_spatial_width</string>
+    <string name="key_cafe_distance" translatable="false">cafe_distance</string>
 </resources>
