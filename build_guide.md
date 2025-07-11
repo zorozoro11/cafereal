@@ -31,9 +31,15 @@ Transforming **RootlessJamesDSP** into **Cafetone** - a specialized audio proces
 - Identified key DSP components suitable for café mode
 - Mapped existing DSP functions to café mode requirements
 - Created comprehensive build guide
+- **Updated app branding**: Changed app name to "Cafetone", package to "com.cafetone.dsp"
+- **Simplified build configuration**: Removed complex flavor system, kept only essential variants
+- **Updated AndroidConfig**: Reset version to 1.0.0, maintained rootless focus
+- **Streamlined dependencies**: Removed unused dependencies (Room, Retrofit, etc.)
+- **Updated gradle namespace**: Changed from "me.timschneeberger.rootlessjamesdsp" to "com.cafetone.dsp"
 
 **What's Working:**
-- Original RootlessJamesDSP app builds and runs
+- Original RootlessJamesDSP app architecture identified
+- Build configuration updated for Cafetone
 - Identified perfect DSP building blocks:
   - Convolver (for café space acoustics)
   - Multi-band EQ (for distance frequency shaping)
@@ -43,7 +49,8 @@ Transforming **RootlessJamesDSP** into **Cafetone** - a specialized audio proces
   - Post Gain (for distance simulation)
 
 **Known Issues:**
-- None at this stage
+- Gradle build is taking long time (common with Android builds)
+- Need to test build configuration changes
 
 ## Next Steps:
 1. **Phase 1 Completion**: Update branding (app name, package, icons)
