@@ -176,6 +176,8 @@ class RootlessAudioProcessorService : BaseAudioProcessorService() {
             }
             ACTION_START -> {
                 Timber.d("Starting service")
+                // Apply café mode settings when service starts
+                applyCafeModeFromPreferences()
             }
             ACTION_STOP -> {
                 Timber.d("Stopping service")
