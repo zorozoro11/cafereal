@@ -674,6 +674,78 @@ class RootlessAudioProcessorService : BaseAudioProcessorService() {
         return framesPerBuffer?.let { str -> Integer.parseInt(str).takeUnless { it == 0 } } ?: 256
     }
 
+    private fun applyCafeModeFromPreferences() {
+        try {
+            // Load café mode settings from preferences
+            val intensity = preferences.get<Int>(com.cafetone.dsp.R.string.key_cafe_intensity) ?: 70
+            val spatialWidth = preferences.get<Int>(com.cafetone.dsp.R.string.key_cafe_spatial_width) ?: 60
+            val distance = preferences.get<Int>(com.cafetone.dsp.R.string.key_cafe_distance) ?: 80
+            
+            // Apply café mode DSP processing
+            applyCafeModeProcessing(intensity, spatialWidth, distance)
+            
+            Timber.i("Café mode settings applied from preferences: Intensity=$intensity%, SpatialWidth=$spatialWidth%, Distance=$distance%")
+        } catch (ex: Exception) {
+            Timber.e(ex, "Failed to apply café mode settings from preferences")
+        }
+    }
+    
+    private fun applyCafeModeProcessing(intensity: Int, spatialWidth: Int, distance: Int) {
+        // Same DSP processing logic as in MainActivity
+        val distanceEqBands = getDistanceEqBands(distance.toFloat())
+        engine.setMultiEqualizer(true, 0, 0, distanceEqBands)
+        
+        val spatialSettings = getSpatialSettings(spatialWidth.toFloat())
+        engine.setCrossfeedCustom(true, spatialSettings.crossfeedFcut, spatialSettings.crossfeedFeed)
+        engine.setStereoEnhancement(true, spatialSettings.stereoWidth)
+        
+        val ambienceSettings = getCafeAmbienceSettings(intensity.toFloat())
+        engine.setReverb(true, ambienceSettings.reverbPreset)
+        engine.setOutputControl(-0.1f, 60f, ambienceSettings.overallGainReduction)
+    }
+    
+    private fun getDistanceEqBands(distancePercent: Float): String {
+        val intensity = distancePercent / 100f
+        val frequencies = arrayOf(
+            25.0, 40.0, 63.0, 100.0, 160.0, 250.0, 400.0, 630.0, 1000.0, 1600.0, 2500.0, 4000.0, 6300.0, 10000.0, 16000.0
+        )
+        val gains = arrayOf(
+            -4.0f * intensity, -6.0f * intensity, -5.0f * intensity, -4.0f * intensity, -3.5f * intensity,
+            -3.0f * intensity, -2.5f * intensity, -2.0f * intensity, -1.5f * intensity, -2.0f * intensity,
+            -4.0f * intensity, -5.0f * intensity, -7.0f * intensity, -11.0f * intensity, -15.0f * intensity
+        )
+        val allValues = frequencies.map { it.toString() } + gains.map { it.toString() }
+        return allValues.joinToString(";")
+    }
+    
+    private fun getSpatialSettings(spatialPercent: Float): SpatialSettings {
+        val width = spatialPercent / 100f
+        return SpatialSettings(
+            crossfeedFcut = (700 + (width * 400)).toInt(),
+            crossfeedFeed = (10 + (width * 25)).toInt(),
+            stereoWidth = 1.2f + (width * 0.8f)
+        )
+    }
+    
+    private fun getCafeAmbienceSettings(intensityPercent: Float): AmbienceSettings {
+        val intensity = intensityPercent / 100f
+        return AmbienceSettings(
+            reverbPreset = if (intensity > 0.5f) 2 else 1,
+            overallGainReduction = -3.0f - (intensity * 7.0f)
+        )
+    }
+    
+    private data class SpatialSettings(
+        val crossfeedFcut: Int,
+        val crossfeedFeed: Int,
+        val stereoWidth: Float
+    )
+    
+    private data class AmbienceSettings(
+        val reverbPreset: Int,
+        val overallGainReduction: Float
+    )
+
     companion object {
         const val SESSION_LOSS_MAX_RETRIES = 1
 
