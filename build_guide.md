@@ -60,11 +60,19 @@ Transforming **RootlessJamesDSP** into **Cafetone** - a specialized audio proces
 - Need to add café impulse response file
 
 ## Next Steps:
-1. **Phase 1 Completion**: Update branding (app name, package, icons)
-2. **Phase 2**: DSP algorithm implementation for café mode
-3. **Phase 3**: UI simplification to 3-slider interface
-4. **Phase 4**: Service architecture streamlining
-5. **Phase 5**: Testing and validation
+1. **Phase 2**: DSP algorithm implementation for café mode
+   - Implement Sony café mode DSP processing chain
+   - Map user controls to existing DSP functions
+   - Add café impulse response file for convolver
+   - Test audio processing pipeline
+2. **Phase 3**: Service integration and testing
+   - Integrate café mode settings with audio processing service
+   - Test Shizuku integration and permissions
+   - Test service lifecycle management
+3. **Phase 4**: Final testing and validation
+   - Test complete café mode experience
+   - Validate audio quality and performance
+   - Test on different devices and Android versions
 
 ## Architecture Changes:
 **Original RootlessJamesDSP components to keep:**
