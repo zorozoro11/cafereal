@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.adapter
+package com.cafetone.dsp.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater

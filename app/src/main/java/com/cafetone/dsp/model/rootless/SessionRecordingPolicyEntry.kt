@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.model.rootless
+package com.cafetone.dsp.model.rootless
 
 data class SessionRecordingPolicyEntry(val uid: Int, val packageName: String, val isRestricted: Boolean)
 {

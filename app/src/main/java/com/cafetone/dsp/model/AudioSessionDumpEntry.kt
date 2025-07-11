@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.model
+package com.cafetone.dsp.model
 
 data class AudioSessionDumpEntry(val uid: Int, val packageName: String, val usage: String, val content: String)
 {

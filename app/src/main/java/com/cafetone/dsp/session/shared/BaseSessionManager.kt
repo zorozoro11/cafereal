@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.session.shared
+package com.cafetone.dsp.session.shared
 
 import android.annotation.SuppressLint
 import android.content.BroadcastReceiver

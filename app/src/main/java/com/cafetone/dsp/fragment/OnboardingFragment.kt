@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.fragment
+package com.cafetone.dsp.fragment
 
 import android.Manifest
 import android.annotation.SuppressLint

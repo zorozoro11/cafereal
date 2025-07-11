@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.session.root
+package com.cafetone.dsp.session.root
 
 import android.content.*
 import me.timschneeberger.rootlessjamesdsp.session.dump.DumpManager

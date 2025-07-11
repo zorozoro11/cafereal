@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.interop
+package com.cafetone.dsp.interop
 
 object JdspImpResToolbox {
     external fun ReadImpulseResponseToFloat(

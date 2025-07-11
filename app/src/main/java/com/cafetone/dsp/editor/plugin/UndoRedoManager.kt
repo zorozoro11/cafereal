@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.editor.plugin
+package com.cafetone.dsp.editor.plugin
 
 import android.text.Editable
 import android.text.Selection

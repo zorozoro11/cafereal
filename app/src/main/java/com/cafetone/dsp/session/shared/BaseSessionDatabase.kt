@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.session.shared
+package com.cafetone.dsp.session.shared
 
 import android.content.Context
 import android.os.Process.myUid

@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.delegates
+package com.cafetone.dsp.delegates
 
 import android.app.Activity
 import me.timschneeberger.rootlessjamesdsp.R

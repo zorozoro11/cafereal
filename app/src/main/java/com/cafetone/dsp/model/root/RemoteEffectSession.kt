@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.model.root
+package com.cafetone.dsp.model.root
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.preference
+package com.cafetone.dsp.preference
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray

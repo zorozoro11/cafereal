@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.model.preference
+package com.cafetone.dsp.model.preference
 
 import me.timschneeberger.rootlessjamesdsp.R
 

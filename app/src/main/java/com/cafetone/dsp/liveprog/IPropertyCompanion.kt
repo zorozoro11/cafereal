@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.liveprog
+package com.cafetone.dsp.liveprog
 
 interface IPropertyCompanion {
     val definitionRegex: Regex

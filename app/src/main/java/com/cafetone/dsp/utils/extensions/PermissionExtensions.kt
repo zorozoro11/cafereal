@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.utils.extensions
+package com.cafetone.dsp.utils.extensions
 
 import android.Manifest
 import android.app.AppOpsManager

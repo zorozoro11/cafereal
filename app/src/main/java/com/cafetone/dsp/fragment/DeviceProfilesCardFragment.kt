@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.fragment
+package com.cafetone.dsp.fragment
 
 import android.content.res.Configuration
 import android.os.Bundle

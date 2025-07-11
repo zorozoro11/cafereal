@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.activity
+package com.cafetone.dsp.activity
 
 import android.os.Bundle
 import androidx.core.view.WindowCompat

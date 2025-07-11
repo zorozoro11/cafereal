@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.utils.notifications
+package com.cafetone.dsp.utils.notifications
 
 import android.content.Context
 import androidx.core.app.NotificationManagerCompat

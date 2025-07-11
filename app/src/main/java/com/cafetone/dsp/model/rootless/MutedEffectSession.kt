@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.model.rootless
+package com.cafetone.dsp.model.rootless
 
 import android.media.audiofx.AudioEffect
 import me.timschneeberger.rootlessjamesdsp.model.IEffectSession

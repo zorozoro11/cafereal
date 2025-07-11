@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.session.rootless
+package com.cafetone.dsp.session.rootless
 
 import android.content.Context
 import android.content.pm.PackageManager

@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.interop
+package com.cafetone.dsp.interop
 
 import android.content.Context
 import android.content.SharedPreferences

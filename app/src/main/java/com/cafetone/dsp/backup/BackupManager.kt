@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.backup
+package com.cafetone.dsp.backup
 
 import android.content.Context
 import android.content.Intent

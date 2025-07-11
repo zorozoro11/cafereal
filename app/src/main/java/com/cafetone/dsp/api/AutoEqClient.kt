@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.api
+package com.cafetone.dsp.api
 
 import android.content.Context
 import com.pluto.plugins.network.PlutoInterceptor

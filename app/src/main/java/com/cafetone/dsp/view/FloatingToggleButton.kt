@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.view
+package com.cafetone.dsp.view
 
 import android.animation.AnimatorInflater
 import android.content.Context

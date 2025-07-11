@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.api
+package com.cafetone.dsp.api
 
 import okhttp3.Interceptor
 import okhttp3.Response

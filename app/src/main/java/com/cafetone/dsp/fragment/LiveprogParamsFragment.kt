@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.fragment
+package com.cafetone.dsp.fragment
 
 import android.content.BroadcastReceiver
 import android.content.Context

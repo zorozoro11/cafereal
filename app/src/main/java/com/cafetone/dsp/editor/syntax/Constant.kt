@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.editor.syntax
+package com.cafetone.dsp.editor.syntax
 
 import com.amrdeveloper.codeview.Code
 

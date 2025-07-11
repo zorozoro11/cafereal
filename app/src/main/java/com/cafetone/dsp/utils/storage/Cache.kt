@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.utils.storage
+package com.cafetone.dsp.utils.storage
 
 import android.content.ContentProvider
 import android.content.ContentValues

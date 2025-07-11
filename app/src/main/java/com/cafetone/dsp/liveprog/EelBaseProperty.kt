@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.liveprog
+package com.cafetone.dsp.liveprog
 
 
 abstract class EelBaseProperty(val key: String, val description: String) {

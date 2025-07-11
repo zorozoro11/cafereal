@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.model.preset
+package com.cafetone.dsp.model.preset
 
 import android.content.Context
 import android.content.Intent

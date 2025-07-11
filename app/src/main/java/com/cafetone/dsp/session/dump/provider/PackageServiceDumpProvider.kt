@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.session.dump.provider
+package com.cafetone.dsp.session.dump.provider
 
 import android.content.Context
 import me.timschneeberger.rootlessjamesdsp.model.AppInfo

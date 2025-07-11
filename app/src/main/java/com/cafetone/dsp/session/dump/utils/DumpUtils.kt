@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.session.dump.utils
+package com.cafetone.dsp.session.dump.utils
 
 import android.content.Context
 import android.os.ParcelFileDescriptor

@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.receiver
+package com.cafetone.dsp.receiver
 
 import android.content.BroadcastReceiver
 import android.content.Context

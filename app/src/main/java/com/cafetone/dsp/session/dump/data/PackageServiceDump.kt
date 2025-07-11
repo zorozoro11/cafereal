@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.session.dump.data
+package com.cafetone.dsp.session.dump.data
 
 import me.timschneeberger.rootlessjamesdsp.model.AppInfo
 

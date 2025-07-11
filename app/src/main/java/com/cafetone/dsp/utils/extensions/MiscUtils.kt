@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.utils.extensions
+package com.cafetone.dsp.utils.extensions
 
 import android.animation.ValueAnimator
 import android.os.Build

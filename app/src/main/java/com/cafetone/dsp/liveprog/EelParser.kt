@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.liveprog
+package com.cafetone.dsp.liveprog
 
 import me.timschneeberger.rootlessjamesdsp.utils.extensions.md5
 import timber.log.Timber

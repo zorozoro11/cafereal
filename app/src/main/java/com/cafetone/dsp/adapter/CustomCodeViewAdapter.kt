@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.adapter
+package com.cafetone.dsp.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

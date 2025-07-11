@@ -1,5 +1,5 @@
 @file:Suppress("NOTHING_TO_INLINE")
-package me.timschneeberger.rootlessjamesdsp.utils
+package com.cafetone.dsp.utils
 
 import me.timschneeberger.rootlessjamesdsp.BuildConfig
 

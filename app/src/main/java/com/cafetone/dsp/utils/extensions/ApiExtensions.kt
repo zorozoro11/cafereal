@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.utils.extensions
+package com.cafetone.dsp.utils.extensions
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow

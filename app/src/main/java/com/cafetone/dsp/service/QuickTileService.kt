@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.service
+package com.cafetone.dsp.service
 
 import android.app.PendingIntent
 import android.content.BroadcastReceiver

@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.editor.widget
+package com.cafetone.dsp.editor.widget
 
 import android.content.Context
 import android.graphics.Color

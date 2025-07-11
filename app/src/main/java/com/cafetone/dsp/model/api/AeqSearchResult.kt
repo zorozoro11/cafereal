@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.model.api
+package com.cafetone.dsp.model.api
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

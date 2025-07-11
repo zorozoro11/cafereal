@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.view
+package com.cafetone.dsp.view
 
 import android.annotation.SuppressLint
 import android.content.Context

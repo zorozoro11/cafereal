@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.preference
+package com.cafetone.dsp.preference
 
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint

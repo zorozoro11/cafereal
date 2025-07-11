@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.preference
+package com.cafetone.dsp.preference
 
 import android.content.Context
 import android.util.AttributeSet

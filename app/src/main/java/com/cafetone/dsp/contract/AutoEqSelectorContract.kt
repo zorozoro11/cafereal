@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.contract
+package com.cafetone.dsp.contract
 
 import android.app.Activity
 import android.content.Context

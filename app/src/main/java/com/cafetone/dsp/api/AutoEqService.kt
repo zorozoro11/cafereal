@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.api
+package com.cafetone.dsp.api
 
 import me.timschneeberger.rootlessjamesdsp.model.api.AeqSearchResult
 import retrofit2.Call

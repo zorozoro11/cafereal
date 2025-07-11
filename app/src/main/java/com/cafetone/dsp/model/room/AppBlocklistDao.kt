@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.model.room
+package com.cafetone.dsp.model.room
 
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow

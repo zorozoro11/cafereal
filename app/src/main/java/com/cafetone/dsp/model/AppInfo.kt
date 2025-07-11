@@ -1,4 +1,4 @@
-package me.timschneeberger.rootlessjamesdsp.model
+package com.cafetone.dsp.model
 
 import android.graphics.drawable.Drawable
 
