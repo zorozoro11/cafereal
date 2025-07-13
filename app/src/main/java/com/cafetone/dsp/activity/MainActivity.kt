@@ -94,6 +94,11 @@ class MainActivity : BaseActivity() {
                 processorService = (service as BaseAudioProcessorService.LocalBinder).service
                 processorServiceBound = true
                 binding.powerToggle.isToggled = true
+                
+                // Phase 4: Update processing status
+                if (::processingStatus.isInitialized) {
+                    processingStatus.setStatus(ProcessingStatusIndicatorView.ProcessingStatus.ACTIVE)
+                }
             }
 
             override fun onServiceDisconnected(arg0: ComponentName) {
