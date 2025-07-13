@@ -271,11 +271,24 @@ class MainActivity : BaseActivity() {
                 if (fromUser) {
                     distanceLevel = progress
                     binding.distanceValue.text = "$progress%"
-                    applyCafeModeSettings()
+                    
+                    // Phase 3: Use parameter smoother for artifact-free transitions
+                    parameterSmoother.updateDistance(progress.toFloat())
                 }
             }
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+                val startTime = System.nanoTime()
+                binding.distanceSlider.tag = startTime
+            }
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                val startTime = binding.distanceSlider.tag as? Long ?: return
+                val responseTime = (System.nanoTime() - startTime) / 1_000_000
+                Timber.d("Distance slider response time: ${responseTime}ms")
+                
+                if (responseTime > 100) {
+                    Timber.w("UI responsiveness target missed: ${responseTime}ms > 100ms")
+                }
+            }
         })
     }
 
