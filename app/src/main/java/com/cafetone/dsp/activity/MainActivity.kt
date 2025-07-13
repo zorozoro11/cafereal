@@ -267,6 +267,10 @@ class MainActivity : BaseActivity() {
                     spatialWidthLevel = progress
                     binding.spatialWidthValue.text = "$progress%"
                     
+                    // Phase 4: Add haptic feedback and accessibility
+                    UIAnimationHelper.provideHapticFeedback(this@MainActivity, UIAnimationHelper.HapticType.LIGHT)
+                    binding.spatialWidthSlider.contentDescription = "Spatial width: ${progress}%"
+                    
                     // Phase 3: Use parameter smoother for artifact-free transitions
                     parameterSmoother.updateSpatialWidth(progress.toFloat())
                 }
