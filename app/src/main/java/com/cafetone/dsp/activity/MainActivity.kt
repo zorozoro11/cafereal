@@ -333,6 +333,62 @@ class MainActivity : BaseActivity() {
         }
     }
     
+    /**
+     * Phase 3: Apply café mode settings with smooth parameter transitions
+     * Used by the parameter smoother for artifact-free updates
+     */
+    private fun applyCafeModeSettingsSmooth(intensity: Float, spatialWidth: Float, distance: Float) {
+        try {
+            val startTime = System.nanoTime()
+            
+            // Get the DSP engine from the service
+            val engine = processorService?.getDspEngine()
+            
+            if (engine != null) {
+                // Measure latency for performance monitoring
+                performanceMonitor.measureAudioLatency(engine)
+                
+                // Apply Distance Simulation EQ Profile
+                val distanceEqBands = getDistanceEqBands(distance)
+                engine.setMultiEqualizer(true, 0, 0, distanceEqBands)
+                
+                // Apply Spatial & Positioning effects
+                val spatialSettings = getSpatialSettings(spatialWidth)
+                engine.setCrossfeedCustom(true, spatialSettings.crossfeedFcut, spatialSettings.crossfeedFeed)
+                engine.setStereoEnhancement(true, spatialSettings.stereoWidth)
+                
+                // Apply Café Ambience
+                val ambienceSettings = getCafeAmbienceSettings(intensity)
+                engine.setReverb(true, ambienceSettings.reverbPreset)
+                engine.setOutputControl(-0.1f, 60f, ambienceSettings.overallGainReduction)
+                
+                // Update UI values on main thread
+                CoroutineScope(Dispatchers.Main).launch {
+                    binding.intensityValue.text = "${intensity.toInt()}%"
+                    binding.spatialWidthValue.text = "${spatialWidth.toInt()}%"
+                    binding.distanceValue.text = "${distance.toInt()}%"
+                }
+                
+                val endTime = System.nanoTime()
+                val latencyMs = (endTime - startTime) / 1_000_000
+                
+                // Log smooth transition performance
+                Timber.d("Smooth café mode settings applied in ${latencyMs}ms: Intensity=${intensity}%, SpatialWidth=${spatialWidth}%, Distance=${distance}%")
+                
+                // Check if we exceeded latency target
+                if (latencyMs > 50) {
+                    Timber.w("Smooth parameter update exceeded latency target: ${latencyMs}ms > 50ms")
+                }
+                
+            } else {
+                Timber.w("DSP engine not available for smooth parameter update")
+            }
+            
+        } catch (ex: Exception) {
+            Timber.e(ex, "Failed to apply smooth café mode settings")
+        }
+    }
+    
     // Sony Café Mode DSP Processing Chain Implementation
     
     /**
