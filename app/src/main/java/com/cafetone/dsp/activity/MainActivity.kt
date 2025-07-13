@@ -54,6 +54,13 @@ import org.koin.core.component.inject
 import timber.log.Timber
 import com.cafetone.dsp.audio.CafeModeParameterSmoother
 import com.cafetone.dsp.audio.CafeModePerformanceMonitor
+import com.cafetone.dsp.model.CafeModePreset
+import com.cafetone.dsp.model.CafeModePresetManager
+import com.cafetone.dsp.view.ProcessingStatusIndicatorView
+import com.cafetone.dsp.view.AudioLevelMeterView
+import com.cafetone.dsp.ui.UIAnimationHelper
+import java.util.Timer
+import java.util.TimerTask
 
 class MainActivity : BaseActivity() {
     /* UI bindings */
@@ -67,6 +74,12 @@ class MainActivity : BaseActivity() {
     /* Phase 3: Audio Quality Refinement Components */
     private lateinit var parameterSmoother: CafeModeParameterSmoother
     private lateinit var performanceMonitor: CafeModePerformanceMonitor
+    
+    /* Phase 4: Advanced Features Components */
+    private lateinit var presetManager: CafeModePresetManager
+    private lateinit var processingStatus: ProcessingStatusIndicatorView
+    private lateinit var audioLevelMeter: AudioLevelMeterView
+    private var audioLevelTimer: Timer? = null
     
     /* Audio processing service */
     private lateinit var mediaProjectionManager: MediaProjectionManager
