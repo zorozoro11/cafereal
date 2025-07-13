@@ -504,4 +504,66 @@ class MainActivity : BaseActivity() {
     companion object {
         const val EXTRA_FORCE_SHOW_CAPTURE_PROMPT = "ForceShowCapturePrompt"
     }
+    
+    /**
+     * Phase 3: Initialize Audio Quality Refinement Components
+     */
+    private fun initializePhase3Components() {
+        Timber.i("Phase 3: Initializing audio quality refinement components")
+        
+        // Initialize parameter smoother
+        parameterSmoother = CafeModeParameterSmoother()
+        parameterSmoother.setParametersImmediate(
+            intensityLevel.toFloat(),
+            spatialWidthLevel.toFloat(), 
+            distanceLevel.toFloat()
+        )
+        
+        // Set parameter update callback for smooth transitions
+        parameterSmoother.setParameterUpdateCallback { intensity, spatialWidth, distance ->
+            CoroutineScope(Dispatchers.Default).launch {
+                try {
+                    applyCafeModeSettingsSmooth(intensity, spatialWidth, distance)
+                } catch (ex: Exception) {
+                    Timber.e(ex, "Error in smooth parameter callback")
+                }
+            }
+        }
+        
+        // Initialize performance monitor
+        performanceMonitor = CafeModePerformanceMonitor()
+        
+        // Set performance monitoring callbacks
+        performanceMonitor.setPerformanceCallback { stats ->
+            // Log performance statistics
+            Timber.d("Performance: Latency: ${stats.averageLatencyMs}ms, CPU: ${stats.averageCpuPercent}%, Memory: ${stats.averageMemoryMb}MB")
+            
+            // Update UI with performance indicators (could be added later)
+            if (!stats.targetsStatus.latencyMet || !stats.targetsStatus.cpuMet || !stats.targetsStatus.memoryMet) {
+                Timber.w("Performance targets not met: Latency=${stats.targetsStatus.latencyMet}, CPU=${stats.targetsStatus.cpuMet}, Memory=${stats.targetsStatus.memoryMet}")
+            }
+        }
+        
+        performanceMonitor.setAlertCallback { alert ->
+            when (alert) {
+                is CafeModePerformanceMonitor.PerformanceAlert.HighLatency -> {
+                    Timber.w("High latency detected: ${alert.latencyMs}ms (target: <50ms)")
+                }
+                is CafeModePerformanceMonitor.PerformanceAlert.HighCpuUsage -> {
+                    Timber.w("High CPU usage detected: ${alert.cpuPercent}% (target: <5%)")
+                }
+                is CafeModePerformanceMonitor.PerformanceAlert.HighMemoryUsage -> {
+                    Timber.w("High memory usage detected: ${alert.memoryMb}MB (target: <50MB)")
+                }
+                is CafeModePerformanceMonitor.PerformanceAlert.AudioArtifact -> {
+                    Timber.w("Audio artifact detected: ${alert.description}")
+                }
+            }
+        }
+        
+        // Start performance monitoring
+        performanceMonitor.startMonitoring()
+        
+        Timber.i("Phase 3: Audio quality refinement components initialized successfully")
+    }
 }
