@@ -63,4 +63,36 @@
 
     <color name="black">#000000</color>
 
+    <!-- Phase 4: Audio Level Meter Colors -->
+    <color name="meter_background">#1A1A1A</color>
+    <color name="meter_low">#4CAF50</color>
+    <color name="meter_medium">#FF9800</color>
+    <color name="meter_high">#F44336</color>
+    <color name="meter_peak">#FFFFFF</color>
+    <color name="meter_text">#E0E0E0</color>
+    
+    <!-- Phase 4: Processing Status Colors -->
+    <color name="status_inactive">#757575</color>
+    <color name="status_active">#4CAF50</color>
+    <color name="status_connecting">#2196F3</color>
+    <color name="status_error">#F44336</color>
+    
+    <!-- Phase 4: Preset Colors -->
+    <color name="preset_cozy">#8D6E63</color>
+    <color name="preset_busy">#FF5722</color>
+    <color name="preset_quiet">#3F51B5</color>
+    <color name="preset_outdoor">#009688</color>
+    <color name="preset_custom">#9C27B0</color>
+    
+    <!-- Phase 4: UI Enhancement Colors -->
+    <color name="card_background">#1E1E1E</color>
+    <color name="accent_primary">#BB86FC</color>
+    <color name="accent_secondary">#03DAC6</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B3FFFFFF</color>
+    
+    <!-- Material Design 3 Surface Colors -->
+    <color name="surface_variant">#49454F</color>
+    <color name="on_surface_variant">#CAC4D0</color>
+    <color name="outline">#938F99</color>
 </resources>
