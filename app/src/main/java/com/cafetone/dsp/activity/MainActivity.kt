@@ -105,6 +105,11 @@ class MainActivity : BaseActivity() {
                 Timber.d("Service disconnected")
                 processorService = null
                 processorServiceBound = false
+                
+                // Phase 4: Update processing status
+                if (::processingStatus.isInitialized) {
+                    processingStatus.setStatus(ProcessingStatusIndicatorView.ProcessingStatus.INACTIVE)
+                }
             }
         }
     }
