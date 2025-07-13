@@ -680,4 +680,33 @@ Please press \'Continue\' below to re-do the setup wizard.</string>
     <string name="key_cafe_intensity">cafe_intensity</string>
     <string name="key_cafe_spatial_width">cafe_spatial_width</string>
     <string name="key_cafe_distance">cafe_distance</string>
+    
+    <!-- Phase 4: Café Mode Presets -->
+    <string name="preset_cozy_corner">Cozy Corner</string>
+    <string name="preset_cozy_corner_desc">Intimate, warm café atmosphere perfect for relaxation</string>
+    <string name="preset_busy_coffee_shop">Busy Coffee Shop</string>
+    <string name="preset_busy_coffee_shop_desc">Active café ambience with vibrant energy</string>
+    <string name="preset_quiet_study">Quiet Study</string>
+    <string name="preset_quiet_study_desc">Minimal café effect ideal for concentration</string>
+    <string name="preset_outdoor_terrace">Outdoor Terrace</string>
+    <string name="preset_outdoor_terrace_desc">Open space café with airy acoustics</string>
+    <string name="preset_custom">Custom</string>
+    <string name="preset_custom_desc">Your personalized café settings</string>
+    
+    <!-- Phase 4: UI Enhancements -->
+    <string name="presets_title">Café Presets</string>
+    <string name="current_preset">Current: %1$s</string>
+    <string name="apply_preset">Apply Preset</string>
+    <string name="save_as_preset">Save as Preset</string>
+    <string name="processing_indicator">Processing Audio</string>
+    <string name="audio_level">Audio Level</string>
+    <string name="settings_applied">Settings applied</string>
+    <string name="preset_applied">%1$s preset applied</string>
+    
+    <!-- Phase 4: Accessibility -->
+    <string name="preset_button_desc">Apply %1$s preset</string>
+    <string name="audio_level_desc">Current audio level: %1$d percent</string>
+    <string name="processing_status_desc">Audio processing is %1$s</string>
+    <string name="processing_active">active</string>
+    <string name="processing_inactive">inactive</string>
 </resources>
