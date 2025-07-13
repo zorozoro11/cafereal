@@ -681,10 +681,19 @@ class RootlessAudioProcessorService : BaseAudioProcessorService() {
             val spatialWidth = preferences.get<Int>(com.cafetone.dsp.R.string.key_cafe_spatial_width) ?: 60
             val distance = preferences.get<Int>(com.cafetone.dsp.R.string.key_cafe_distance) ?: 80
             
-            // Apply café mode DSP processing
+            // Apply café mode DSP processing with performance tracking
+            val startTime = System.nanoTime()
             applyCafeModeProcessing(intensity, spatialWidth, distance)
+            val endTime = System.nanoTime()
+            val latencyMs = (endTime - startTime) / 1_000_000
             
-            Timber.i("Café mode settings applied from preferences: Intensity=$intensity%, SpatialWidth=$spatialWidth%, Distance=$distance%")
+            Timber.i("Café mode settings applied from preferences: Intensity=$intensity%, SpatialWidth=$spatialWidth%, Distance=$distance% (${latencyMs}ms)")
+            
+            // Log performance if it exceeds target
+            if (latencyMs > 50) {
+                Timber.w("Service café mode application exceeded latency target: ${latencyMs}ms > 50ms")
+            }
+            
         } catch (ex: Exception) {
             Timber.e(ex, "Failed to apply café mode settings from preferences")
         }
