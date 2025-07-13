@@ -49,6 +49,8 @@ import com.cafetone.dsp.utils.sdkAbove
 import com.cafetone.dsp.view.FloatingToggleButton
 import org.koin.core.component.inject
 import timber.log.Timber
+import com.cafetone.dsp.audio.CafeModeParameterSmoother
+import com.cafetone.dsp.audio.CafeModePerformanceMonitor
 
 class MainActivity : BaseActivity() {
     /* UI bindings */
@@ -58,6 +60,10 @@ class MainActivity : BaseActivity() {
     private var intensityLevel: Int = 70  // Default 70%
     private var spatialWidthLevel: Int = 60  // Default 60%
     private var distanceLevel: Int = 80  // Default 80%
+    
+    /* Phase 3: Audio Quality Refinement Components */
+    private lateinit var parameterSmoother: CafeModeParameterSmoother
+    private lateinit var performanceMonitor: CafeModePerformanceMonitor
     
     /* Audio processing service */
     private lateinit var mediaProjectionManager: MediaProjectionManager
