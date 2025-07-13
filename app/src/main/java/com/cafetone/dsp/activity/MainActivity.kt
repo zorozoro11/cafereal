@@ -131,6 +131,9 @@ class MainActivity : BaseActivity() {
 
         // Setup café mode controls
         setupCafeModeControls()
+        
+        // Phase 3: Initialize audio quality refinement components
+        initializePhase3Components()
 
         // Check permissions and launch onboarding if required
         if(SdkCheck.isQ && isRootless() && (!hasDumpPermission() || !hasRecordPermission())) {
