@@ -150,6 +150,9 @@ class MainActivity : BaseActivity() {
         
         // Phase 3: Initialize audio quality refinement components
         initializePhase3Components()
+        
+        // Phase 4: Initialize advanced features
+        initializePhase4Components()
 
         // Check permissions and launch onboarding if required
         if(SdkCheck.isQ && isRootless() && (!hasDumpPermission() || !hasRecordPermission())) {
