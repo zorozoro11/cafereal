@@ -213,11 +213,26 @@ class MainActivity : BaseActivity() {
                 if (fromUser) {
                     intensityLevel = progress
                     binding.intensityValue.text = "$progress%"
-                    applyCafeModeSettings()
+                    
+                    // Phase 3: Use parameter smoother for artifact-free transitions
+                    parameterSmoother.updateIntensity(progress.toFloat())
                 }
             }
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+                // Measure UI responsiveness
+                val startTime = System.nanoTime()
+                binding.intensitySlider.tag = startTime
+            }
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                // Calculate UI response time (target: <100ms)
+                val startTime = binding.intensitySlider.tag as? Long ?: return
+                val responseTime = (System.nanoTime() - startTime) / 1_000_000
+                Timber.d("Intensity slider response time: ${responseTime}ms")
+                
+                if (responseTime > 100) {
+                    Timber.w("UI responsiveness target missed: ${responseTime}ms > 100ms")
+                }
+            }
         })
 
         // Setup Spatial Width slider
