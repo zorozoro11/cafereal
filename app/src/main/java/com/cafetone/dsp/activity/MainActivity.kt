@@ -658,4 +658,167 @@ class MainActivity : BaseActivity() {
         
         Timber.i("Phase 3: Audio quality refinement components initialized successfully")
     }
+    
+    /**
+     * Phase 4: Initialize Advanced Features & User Experience Components
+     */
+    private fun initializePhase4Components() {
+        Timber.i("Phase 4: Initializing advanced features and user experience components")
+        
+        // Initialize preset manager
+        presetManager = CafeModePresetManager(this)
+        
+        // Initialize visual components
+        processingStatus = binding.processingStatus
+        audioLevelMeter = binding.audioLevelMeter
+        
+        // Setup preset buttons
+        setupPresetButtons()
+        
+        // Setup visual enhancements
+        setupVisualEnhancements()
+        
+        // Setup accessibility features
+        setupAccessibilityFeatures()
+        
+        // Load current preset
+        loadCurrentPreset()
+        
+        // Start audio level monitoring
+        startAudioLevelMonitoring()
+        
+        Timber.i("Phase 4: Advanced features initialized successfully")
+    }
+    
+    /**
+     * Setup preset button handlers
+     */
+    private fun setupPresetButtons() {
+        val presetButtons = mapOf(
+            binding.presetCozyCorner to "cozy_corner",
+            binding.presetBusyCoffee to "busy_coffee_shop", 
+            binding.presetQuietStudy to "quiet_study",
+            binding.presetOutdoorTerrace to "outdoor_terrace"
+        )
+        
+        presetButtons.forEach { (button, presetId) ->
+            button.setOnClickListener { 
+                applyPreset(presetId, button)
+            }
+        }
+    }
+    
+    /**
+     * Apply preset with animations and haptic feedback
+     */
+    private fun applyPreset(presetId: String, selectedButton: View) {
+        val preset = CafeModePreset.getPresetById(presetId) ?: return
+        
+        // Provide haptic feedback
+        UIAnimationHelper.provideHapticFeedback(this, UIAnimationHelper.HapticType.LIGHT)
+        
+        // Animate button press
+        UIAnimationHelper.animateButtonPress(selectedButton) {
+            // Apply preset settings
+            presetManager.applyPreset(preset) { intensity, spatialWidth, distance ->
+                runOnUiThread {
+                    // Update sliders without triggering listeners
+                    binding.intensitySlider.progress = intensity.toInt()
+                    binding.spatialWidthSlider.progress = spatialWidth.toInt()
+                    binding.distanceSlider.progress = distance.toInt()
+                    
+                    // Update internal values
+                    intensityLevel = intensity.toInt()
+                    spatialWidthLevel = spatialWidth.toInt()
+                    distanceLevel = distance.toInt()
+                    
+                    // Update parameter smoother
+                    parameterSmoother.setParametersImmediate(intensity, spatialWidth, distance)
+                    
+                    // Update UI
+                    updatePresetUI(preset)
+                    
+                    // Show feedback
+                    toast(getString(R.string.preset_applied, getString(preset.nameResId)))
+                }
+            }
+        }
+        
+        // Animate preset selection
+        val otherButtons = listOf(
+            binding.presetCozyCorner,
+            binding.presetBusyCoffee,
+            binding.presetQuietStudy,
+            binding.presetOutdoorTerrace
+        )
+        UIAnimationHelper.animatePresetSelection(selectedButton, otherButtons)
+    }
+    
+    /**
+     * Setup visual enhancements
+     */
+    private fun setupVisualEnhancements() {
+        // Animate cards on startup
+        UIAnimationHelper.animateCardAppearance(binding.intensitySlider.parent as View, 100)
+        UIAnimationHelper.animateCardAppearance(binding.spatialWidthSlider.parent as View, 200)
+        UIAnimationHelper.animateCardAppearance(binding.distanceSlider.parent as View, 300)
+        
+        // Setup processing status
+        processingStatus.setStatus(ProcessingStatusIndicatorView.ProcessingStatus.INACTIVE)
+    }
+    
+    /**
+     * Setup accessibility features
+     */
+    private fun setupAccessibilityFeatures() {
+        // Update slider content descriptions
+        binding.intensitySlider.contentDescription = "Café intensity: ${intensityLevel}%"
+        binding.spatialWidthSlider.contentDescription = "Spatial width: ${spatialWidthLevel}%"
+        binding.distanceSlider.contentDescription = "Distance effect: ${distanceLevel}%"
+        
+        // Setup preset button descriptions
+        binding.presetCozyCorner.contentDescription = getString(R.string.preset_button_desc, getString(R.string.preset_cozy_corner))
+        binding.presetBusyCoffee.contentDescription = getString(R.string.preset_button_desc, getString(R.string.preset_busy_coffee_shop))
+        binding.presetQuietStudy.contentDescription = getString(R.string.preset_button_desc, getString(R.string.preset_quiet_study))
+        binding.presetOutdoorTerrace.contentDescription = getString(R.string.preset_button_desc, getString(R.string.preset_outdoor_terrace))
+    }
+    
+    /**
+     * Load current preset and update UI
+     */
+    private fun loadCurrentPreset() {
+        val currentPreset = presetManager.getCurrentPreset()
+        updatePresetUI(currentPreset)
+    }
+    
+    /**
+     * Update UI to reflect current preset
+     */
+    private fun updatePresetUI(preset: CafeModePreset) {
+        binding.currentPresetText.text = getString(preset.nameResId)
+    }
+    
+    /**
+     * Start audio level monitoring for visual feedback
+     */
+    private fun startAudioLevelMonitoring() {
+        audioLevelTimer = Timer()
+        audioLevelTimer?.scheduleAtFixedRate(object : TimerTask() {
+            override fun run() {
+                val engine = processorService?.getDspEngine()
+                if (engine != null) {
+                    // Simulate audio level (in real implementation, get from DSP engine)
+                    val simulatedLevel = kotlin.random.Random.nextFloat() * 0.8f
+                    
+                    runOnUiThread {
+                        audioLevelMeter.updateLevel(simulatedLevel)
+                    }
+                } else {
+                    runOnUiThread {
+                        audioLevelMeter.updateLevel(0f)
+                    }
+                }
+            }
+        }, 0, 50) // Update every 50ms for smooth animation
+    }
 }
