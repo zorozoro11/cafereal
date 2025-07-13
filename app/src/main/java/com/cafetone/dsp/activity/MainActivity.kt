@@ -517,6 +517,14 @@ class MainActivity : BaseActivity() {
     override fun onDestroy() {
         unregisterLocalReceiver(broadcastReceiver)
         
+        // Phase 3: Clean up audio quality refinement components
+        if (::parameterSmoother.isInitialized) {
+            parameterSmoother.stop()
+        }
+        if (::performanceMonitor.isInitialized) {
+            performanceMonitor.stopMonitoring()
+        }
+        
         try {
             if (processorService != null && processorServiceBound)
                 unbindService(processorServiceConnection)
