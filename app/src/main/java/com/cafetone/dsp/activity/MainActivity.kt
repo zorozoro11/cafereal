@@ -243,11 +243,24 @@ class MainActivity : BaseActivity() {
                 if (fromUser) {
                     spatialWidthLevel = progress
                     binding.spatialWidthValue.text = "$progress%"
-                    applyCafeModeSettings()
+                    
+                    // Phase 3: Use parameter smoother for artifact-free transitions
+                    parameterSmoother.updateSpatialWidth(progress.toFloat())
                 }
             }
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+                val startTime = System.nanoTime()
+                binding.spatialWidthSlider.tag = startTime
+            }
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                val startTime = binding.spatialWidthSlider.tag as? Long ?: return
+                val responseTime = (System.nanoTime() - startTime) / 1_000_000
+                Timber.d("Spatial width slider response time: ${responseTime}ms")
+                
+                if (responseTime > 100) {
+                    Timber.w("UI responsiveness target missed: ${responseTime}ms > 100ms")
+                }
+            }
         })
 
         // Setup Distance slider
