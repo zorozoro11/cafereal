@@ -575,6 +575,10 @@ class MainActivity : BaseActivity() {
             performanceMonitor.stopMonitoring()
         }
         
+        // Phase 4: Clean up advanced features components
+        audioLevelTimer?.cancel()
+        audioLevelTimer = null
+        
         try {
             if (processorService != null && processorServiceBound)
                 unbindService(processorServiceConnection)
