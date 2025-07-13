@@ -475,6 +475,15 @@ class MainActivity : BaseActivity() {
         binding.spatialWidthValue.text = "$spatialWidthLevel%"
         binding.distanceSlider.progress = distanceLevel
         binding.distanceValue.text = "$distanceLevel%"
+        
+        // Phase 3: Update parameter smoother with loaded values
+        if (::parameterSmoother.isInitialized) {
+            parameterSmoother.setParametersImmediate(
+                intensityLevel.toFloat(),
+                spatialWidthLevel.toFloat(),
+                distanceLevel.toFloat()
+            )
+        }
     }
 
     private fun saveCafeModeSettings() {
