@@ -299,6 +299,10 @@ class MainActivity : BaseActivity() {
                     distanceLevel = progress
                     binding.distanceValue.text = "$progress%"
                     
+                    // Phase 4: Add haptic feedback and accessibility
+                    UIAnimationHelper.provideHapticFeedback(this@MainActivity, UIAnimationHelper.HapticType.LIGHT)
+                    binding.distanceSlider.contentDescription = "Distance effect: ${progress}%"
+                    
                     // Phase 3: Use parameter smoother for artifact-free transitions
                     parameterSmoother.updateDistance(progress.toFloat())
                 }
