@@ -233,6 +233,10 @@ class MainActivity : BaseActivity() {
                     intensityLevel = progress
                     binding.intensityValue.text = "$progress%"
                     
+                    // Phase 4: Add haptic feedback and accessibility
+                    UIAnimationHelper.provideHapticFeedback(this@MainActivity, UIAnimationHelper.HapticType.LIGHT)
+                    binding.intensitySlider.contentDescription = "Café intensity: ${progress}%"
+                    
                     // Phase 3: Use parameter smoother for artifact-free transitions
                     parameterSmoother.updateIntensity(progress.toFloat())
                 }
